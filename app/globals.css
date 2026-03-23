@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #050505;
+  --bg-secondary: #0A0A0A;
+  --bg-card: #121212;
+  --text-primary: #e5e5e5;
+  --text-secondary: #9ca3af;
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Glass Card */
+.glass-card {
+  background: #141414e6;
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card:hover {
+  border-color: #60a5fa33;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px #00000080;
+}
+
+/* Btn Shine */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skew(-25deg);
+  animation: buttonShine 3s infinite;
+}
+@keyframes buttonShine {
+  0% { left: -150%; }
+  50%, 100% { left: 150%; }
+}
+
+/* Pattern Grid */
+.pattern-grid {
+  position: relative;
+}
+.pattern-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at 50% 50%, black 20%, transparent 70%),
+    linear-gradient(to right, transparent 10%, black 30%, black 70%, transparent 90%);
+  mask-composite: intersect;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 20%, transparent 70%),
+    linear-gradient(to right, transparent 10%, black 30%, black 70%, transparent 90%);
+  -webkit-mask-composite: source-in;
+  pointer-events: none;
+}
+
+/* Pattern Diagonal */
+.pattern-diagonal {
+  position: relative;
+}
+.pattern-diagonal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 80px,
+    rgba(255, 255, 255, 0.04) 80px,
+    rgba(255, 255, 255, 0.04) 81px,
+    transparent 81px
+  );
+  mask-image:
+    radial-gradient(ellipse 80% 60% at 20% 30%, transparent 40%, black),
+    radial-gradient(ellipse 70% 50% at 80% 70%, transparent 50%, black),
+    linear-gradient(to bottom, black 10%, transparent 40%, transparent 60%, black 90%);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Selection */
+::selection { background: #3b82f64d; color: #fff; }
+::-moz-selection { background: #3b82f64d; color: #fff; }
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translate(0); }
+  100% { transform: translate(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
