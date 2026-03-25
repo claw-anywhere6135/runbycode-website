@@ -80,6 +80,27 @@ export default function Navbar() {
                     </div>
                     <p className="text-[11px] text-gray-400 leading-snug">B2B-Features, Preise, Rollen & Integrationen.</p>
                   </Link>
+                  <Link href="/woocommerce-wartung" className="block p-3 rounded-xl hover:bg-white/5 transition-colors">
+                    <div className="flex items-center gap-2 mb-1">
+                      <i className="fa-solid fa-rotate text-blue-400" />
+                      <span className="font-semibold text-white text-sm">WooCommerce Wartung</span>
+                    </div>
+                    <p className="text-[11px] text-gray-400 leading-snug">Staging-Updates, Checkout-Tests, Zero-Downtime.</p>
+                  </Link>
+                  <Link href="/wordpress-wartung" className="block p-3 rounded-xl hover:bg-white/5 transition-colors">
+                    <div className="flex items-center gap-2 mb-1">
+                      <i className="fa-brands fa-wordpress text-blue-400" />
+                      <span className="font-semibold text-white text-sm">WordPress Wartung</span>
+                    </div>
+                    <p className="text-[11px] text-gray-400 leading-snug">Core-Updates, Monitoring, Backups & Betreuung.</p>
+                  </Link>
+                  <Link href="/woocommerce-entwickler" className="block p-3 rounded-xl hover:bg-white/5 transition-colors">
+                    <div className="flex items-center gap-2 mb-1">
+                      <i className="fa-solid fa-user-gear text-blue-400" />
+                      <span className="font-semibold text-white text-sm">WooCommerce Entwickler</span>
+                    </div>
+                    <p className="text-[11px] text-gray-400 leading-snug">Florian Salman & Team — 10+ Jahre Erfahrung.</p>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -130,6 +151,9 @@ export default function Navbar() {
               <Link href="/services/security" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-red-400 transition-colors">Security</Link>
               <Link href="/services/maintenance" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-green-400 transition-colors">Wartung</Link>
               <Link href="/services/b2b-shops" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-purple-300 transition-colors">B2B Shops</Link>
+              <Link href="/woocommerce-wartung" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-blue-400 transition-colors">WooCommerce Wartung</Link>
+              <Link href="/wordpress-wartung" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-blue-400 transition-colors">WordPress Wartung</Link>
+              <Link href="/woocommerce-entwickler" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-blue-400 transition-colors">WooCommerce Entwickler</Link>
             </div>
           </div>
           <Link href="/pricing" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-white py-4 border-b border-white/5 hover:text-blue-500 transition-colors">
