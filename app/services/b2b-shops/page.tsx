@@ -1,6 +1,11 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'B2B Shop Lösungen | RunByCode' };
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'WooCommerce B2B Shop — Custom Development & Integrationen',
+  description: 'WooCommerce B2B Shop Entwicklung: Kundengruppen, Rollenpreise, ERP/CRM-Integration, Custom Checkout und komplexe Plugin-Entwicklung.',
+  alternates: { canonical: 'https://runbycode.de/services/b2b-shops' },
+};
 
 export default function B2BPage() {
   return (

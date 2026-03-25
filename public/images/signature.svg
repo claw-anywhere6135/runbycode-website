@@ -1,1 +1,12 @@
-File not found: /v1/AUTH_mw/wikipedia-commons-local-public.e4/e/e4/Signature_sample.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
+  <path d="M20 55 C30 20, 45 15, 55 30 C60 38, 58 50, 52 55 C45 62, 35 58, 30 50 C25 42, 28 30, 38 28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M65 28 C70 22, 80 20, 88 26 C95 32, 94 44, 88 50 C82 56, 72 54, 68 48 C64 42, 66 32, 72 30" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M100 28 L100 60 M100 40 C108 34, 118 32, 124 38 C130 44, 126 56, 118 60 C110 64, 102 60, 100 54" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M138 28 C142 22, 152 20, 160 26 C168 32, 167 46, 160 52 C153 58, 142 56, 138 50 L136 60" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M175 30 L185 56 M175 30 L195 30 M180 43 L192 43" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M210 30 C220 22, 232 20, 240 28 C248 36, 244 50, 236 55 C228 60, 216 56, 212 48 C208 40, 212 30, 220 28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M255 30 L255 60 M255 30 C268 20, 278 22, 278 34 C278 46, 266 50, 255 48" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M295 55 C302 20, 318 15, 328 28 C334 36, 330 50, 322 56 C314 62, 302 56, 298 48" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M340 30 L352 58 L364 30" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M370 65 C374 62, 380 62, 384 65" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>

@@ -1,7 +1,12 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Leistungen | RunByCode',
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'WooCommerce Services — Performance, Security & Wartung',
+  description: 'Full-Stack WooCommerce Services aus Muenchen: Performance-Optimierung, Security, Staging-Updates, Custom Development und Backup & Uptime-Monitoring.',
+  alternates: { canonical: 'https://runbycode.de/services' },
+  openGraph: { title: 'WooCommerce Services | RunByCode', url: 'https://runbycode.de/services' },
 };
 
 const services = [

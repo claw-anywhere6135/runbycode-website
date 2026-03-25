@@ -1,7 +1,12 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Preise | RunByCode',
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Pakete & Preise — WooCommerce Betreuung',
+  description: 'WooCommerce Wartungspakete von RunByCode. Flexible Stundenpakete statt starre Vertraege — Support, Security, Performance & Custom Dev aus Muenchen.',
+  alternates: { canonical: 'https://runbycode.de/pricing' },
+  openGraph: { title: 'Pakete & Preise | RunByCode', url: 'https://runbycode.de/pricing' },
 };
 
 const plans = [

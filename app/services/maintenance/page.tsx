@@ -1,6 +1,11 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'Wartung & Pflege | RunByCode' };
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'WooCommerce Wartung — Staging-Updates & Zero-Downtime',
+  description: 'Professionelle WooCommerce Wartung mit Staging-Clone, manuellen Checkout-Tests und Zero-Downtime-Updates. Kein blindes Update-Klicken.',
+  alternates: { canonical: 'https://runbycode.de/services/maintenance' },
+};
 
 export default function MaintenancePage() {
   return (

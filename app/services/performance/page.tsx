@@ -1,6 +1,11 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'Performance Optimierung | RunByCode' };
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'WooCommerce Performance Optimierung — Google PageSpeed 90+',
+  description: 'WooCommerce Performance-Optimierung aus Muenchen: Core Web Vitals, Datenbank-Tuning, Asset-Minification und CDN. Wir bringen deinen Shop auf Google PageSpeed 90+.',
+  alternates: { canonical: 'https://runbycode.de/services/performance' },
+};
 
 export default function PerformancePage() {
   return (

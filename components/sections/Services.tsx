@@ -34,7 +34,7 @@ export default function Services() {
             >
               Mehr zur Performance-Optimierung <i className="fa-solid fa-arrow-right text-xs" />
             </Link>
-            <div className="grid grid-cols-2 gap-4 text-sm text-gray-500">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-500">
               <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Google PageSpeed 90+</div>
               <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Datenbank Indizes</div>
               <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Image Delivery CDN</div>

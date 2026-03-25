@@ -1,8 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Über uns | RunByCode',
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Über uns — WooCommerce Agentur München | Florian Salman & Team',
+  description:
+    'RunByCode ist eine WooCommerce Agentur aus München, gegründet von Florian Salman. Kein Callcenter, kein Anonymitaet — echte Entwickler, die deinen Shop kennen.',
+  alternates: {
+    canonical: 'https://runbycode.de/about',
+  },
+  openGraph: {
+    title: 'Über uns — Florian Salman & Team | RunByCode',
+    description: 'Lern das Team hinter RunByCode kennen — WooCommerce Spezialisten aus München.',
+    url: 'https://runbycode.de/about',
+  },
 };
 
 export default function AboutPage() {

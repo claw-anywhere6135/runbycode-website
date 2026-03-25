@@ -1,6 +1,11 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'Security | RunByCode' };
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'WooCommerce Security — Firewall, Malware & Hacked Site Rescue',
+  description: '24/7 Malware-Scans, Firewall-Konfiguration und Hacked Site Rescue fuer WooCommerce Shops. Brute-Force-Schutz und 2FA Einrichtung inklusive.',
+  alternates: { canonical: 'https://runbycode.de/services/security' },
+};
 
 export default function SecurityPage() {
   return (

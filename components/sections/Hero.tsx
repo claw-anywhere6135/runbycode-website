@@ -36,6 +36,8 @@ export default function Hero() {
                 CTO auf Abruf.
               </span>
             </h1>
+            {/* Hidden SEO keyword — visible to crawlers, nicht storend fuer User */}
+            <p className="sr-only">WooCommerce Agentur München — RunByCode</p>
 
             <p className="text-xl text-gray-400 mb-10 leading-relaxed max-w-lg">
               Keine anonyme Agentur. Kein Callcenter. Wir sind dein technisches Rückgrat. Wir sorgen
