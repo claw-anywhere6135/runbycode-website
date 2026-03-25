@@ -158,9 +158,41 @@ body {
 :root:not(.dark) .bg-\[\#050505\],
 :root:not(.dark) .bg-\[\#121212\],
 :root:not(.dark) .bg-\[\#0A0A0A\],
+:root:not(.dark) .bg-\[\#070707\],
 :root:not(.dark) .bg-\[#050505\],
-:root:not(.dark) .bg-\[#121212\] {
+:root:not(.dark) .bg-\[#121212\],
+:root:not(.dark) .bg-\[#070707\] {
   background-color: #f8fafc;
+}
+
+/* Portfolio / Stats cards — gradient image placeholder overrides */
+:root:not(.dark) #portfolio .bg-black\/20 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+:root:not(.dark) #portfolio .bg-gradient-to-br {
+  opacity: 0.85;
+  filter: saturate(1.2) brightness(1.1);
+}
+
+/* Portfolio nav buttons */
+:root:not(.dark) #portfolio button {
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.04);
+  color: #0f172a;
+}
+:root:not(.dark) #portfolio button:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Tags in portfolio cards */
+:root:not(.dark) .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+:root:not(.dark) [class*="border-white\/8"] {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+:root:not(.dark) .text-gray-600 {
+  color: #94a3b8;
 }
 
 /* Nav background */
