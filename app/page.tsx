@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import Hero from '@/components/sections/Hero';
-import LogoBar from '@/components/sections/LogoBar';
+import LogoMarquee from '@/components/ui/LogoMarquee';
 import Blackbox from '@/components/sections/Blackbox';
 import Services from '@/components/sections/Services';
 import WhyRunByCode from '@/components/sections/WhyRunByCode';
+import Portfolio from '@/components/sections/Portfolio';
+import Testimonials from '@/components/sections/Testimonials';
 import ContactForm from '@/components/sections/ContactForm';
 
 export const metadata: Metadata = {
@@ -19,10 +21,12 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <LogoBar />
+      <LogoMarquee />
       <Blackbox />
       <Services />
       <WhyRunByCode />
+      <Portfolio />
+      <Testimonials />
       <ContactForm />
     </>
   );

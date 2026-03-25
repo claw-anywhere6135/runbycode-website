@@ -106,6 +106,18 @@ export default function Navbar() {
             </div>
 
             <Link
+              href="/#portfolio"
+              className="px-4 py-1.5 text-sm font-medium rounded-full transition-all text-gray-400 hover:text-white hover:bg-white/5"
+            >
+              Portfolio
+            </Link>
+            <Link
+              href="/#testimonials"
+              className="px-4 py-1.5 text-sm font-medium rounded-full transition-all text-gray-400 hover:text-white hover:bg-white/5"
+            >
+              Referenzen
+            </Link>
+            <Link
               href="/pricing"
               className="px-4 py-1.5 text-sm font-medium rounded-full transition-all text-gray-400 hover:text-white hover:bg-white/5"
             >
@@ -156,6 +168,12 @@ export default function Navbar() {
               <Link href="/woocommerce-entwickler" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-blue-400 transition-colors">WooCommerce Entwickler</Link>
             </div>
           </div>
+          <Link href="/#portfolio" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-white py-4 border-b border-white/5 hover:text-blue-500 transition-colors">
+            Portfolio
+          </Link>
+          <Link href="/#testimonials" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-white py-4 border-b border-white/5 hover:text-blue-500 transition-colors">
+            Referenzen
+          </Link>
           <Link href="/pricing" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-white py-4 border-b border-white/5 hover:text-blue-500 transition-colors">
             Preise
           </Link>

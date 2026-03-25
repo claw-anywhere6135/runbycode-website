@@ -123,9 +123,24 @@ body {
 }
 
 @keyframes marquee {
-  0% { transform: translate(0); }
-  100% { transform: translate(-50%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 .animate-marquee {
   animation: marquee 30s linear infinite;
+}
+
+/* Testimonial vertical scroll */
+@keyframes scroll-up {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+.animate-scroll-up {
+  animation: scroll-up 25s linear infinite;
+}
+.animate-scroll-up-slow {
+  animation: scroll-up 35s linear infinite;
+}
+.animate-scroll-down {
+  animation: scroll-up 25s linear infinite reverse;
 }
