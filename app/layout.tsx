@@ -4,6 +4,7 @@ import './globals.css';
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import { ThemeProvider } from '@/components/layout/ThemeProvider';
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -128,7 +129,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="de" className="scroll-smooth">
+    <html lang="de" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
@@ -141,18 +142,20 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${plusJakarta.variable} ${reenieBeanie.variable} font-sans antialiased bg-[#050505] text-[#e5e5e5]`}
+        className={`${plusJakarta.variable} ${reenieBeanie.variable} font-sans antialiased bg-[#050505] text-[#e5e5e5] dark:bg-[#050505] dark:text-[#e5e5e5] light:bg-white light:text-gray-900`}
       >
-        {/* Ambient Light Effects */}
-        <div className="fixed top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none z-0" />
-        <div className="fixed bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/5 blur-[120px] rounded-full pointer-events-none z-0" />
+        <ThemeProvider>
+          {/* Ambient Light Effects */}
+          <div className="fixed top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none z-0" />
+          <div className="fixed bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/5 blur-[120px] rounded-full pointer-events-none z-0" />
 
-        <AnnouncementBar />
-        <div className="relative z-10">
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </div>
+          <AnnouncementBar />
+          <div className="relative z-10">
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
