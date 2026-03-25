@@ -9,13 +9,24 @@
   --border-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Light Mode Variables — next-themes entfernt .dark, setzt kein .light */
+:root:not(.dark) {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --border-color: rgba(0, 0, 0, 0.08);
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Glass Card */
+/* Glass Card — Dark */
 .glass-card {
   background: #141414e6;
   backdrop-filter: blur(16px);
@@ -26,6 +37,17 @@ body {
   border-color: #60a5fa33;
   transform: translateY(-5px);
   box-shadow: 0 20px 40px -10px #00000080;
+}
+
+/* Glass Card — Light */
+:root:not(.dark) .glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+:root:not(.dark) .glass-card:hover {
+  border-color: #3b82f640;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
 }
 
 /* Btn Shine */
@@ -95,11 +117,106 @@ body {
   pointer-events: none;
 }
 
+/* Light Mode Pattern adjustments */
+:root:not(.dark) .pattern-grid::before {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+:root:not(.dark) .pattern-diagonal::before {
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 80px,
+    rgba(0, 0, 0, 0.03) 80px,
+    rgba(0, 0, 0, 0.03) 81px,
+    transparent 81px
+  );
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #050505; }
 ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Light Mode Scrollbar */
+:root:not(.dark) ::-webkit-scrollbar-track { background: #f1f5f9; }
+:root:not(.dark) ::-webkit-scrollbar-thumb { background: #cbd5e1; }
+:root:not(.dark) ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Light Mode Body Override */
+:root:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* ===== LIGHT MODE GLOBAL OVERRIDES ===== */
+/* next-themes entfernt .dark beim Wechsel zu Light — kein .light wird gesetzt */
+
+/* Background overrides */
+:root:not(.dark) .bg-\[\#050505\],
+:root:not(.dark) .bg-\[\#121212\],
+:root:not(.dark) .bg-\[\#0A0A0A\],
+:root:not(.dark) .bg-\[#050505\],
+:root:not(.dark) .bg-\[#121212\] {
+  background-color: #f8fafc;
+}
+
+/* Nav background */
+:root:not(.dark) nav {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Text overrides */
+:root:not(.dark) .text-white {
+  color: #0f172a;
+}
+:root:not(.dark) .text-gray-400 {
+  color: #64748b;
+}
+:root:not(.dark) .text-gray-300 {
+  color: #475569;
+}
+:root:not(.dark) .text-\[\#e5e5e5\] {
+  color: #0f172a;
+}
+
+/* Border overrides */
+:root:not(.dark) .border-white\/5,
+:root:not(.dark) .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile menu override */
+:root:not(.dark) .bg-\[\#050505\].fixed {
+  background-color: #f8fafc;
+}
+
+/* Navbar pill nav override */
+:root:not(.dark) .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+:root:not(.dark) .hover\:bg-white\/5:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+:root:not(.dark) .hover\:text-white:hover {
+  color: #0f172a;
+}
+
+/* Dropdown card override */
+:root:not(.dark) .bg-black {
+  background-color: #ffffff;
+}
+
+/* Ambient light blobs — adjust for light mode */
+:root:not(.dark) .bg-blue-600\/5 {
+  opacity: 0.3;
+}
+:root:not(.dark) .bg-purple-600\/5 {
+  opacity: 0.3;
+}
 
 /* Selection */
 ::selection { background: #3b82f64d; color: #fff; }

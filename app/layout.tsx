@@ -142,7 +142,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${plusJakarta.variable} ${reenieBeanie.variable} font-sans antialiased bg-[#050505] text-[#e5e5e5] dark:bg-[#050505] dark:text-[#e5e5e5] light:bg-white light:text-gray-900`}
+        className={`${plusJakarta.variable} ${reenieBeanie.variable} font-sans antialiased bg-[#050505] text-[#e5e5e5] dark:bg-[#050505] dark:text-[#e5e5e5]`}
       >
         <ThemeProvider>
           {/* Ambient Light Effects */}
