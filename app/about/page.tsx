@@ -31,7 +31,7 @@ export default function AboutPage() {
         <div className="inline-flex items-center mb-8 border-l-2 border-blue-500 pl-4">
           <span className="text-blue-400 font-mono text-sm tracking-wide uppercase">Über RunByCode</span>
         </div>
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
           Wir sind dein technisches{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
             Rückgrat.
@@ -45,7 +45,7 @@ export default function AboutPage() {
 
       {/* Story */}
       <section className="bg-brand-card border-y border-white/5 py-24 mb-24">
-        <div className="max-w-4xl mx-auto px-6 grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+        <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-16 items-start">
           <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
             <Image
               src="/images/florian-salman.jpg"
@@ -83,7 +83,7 @@ export default function AboutPage() {
       {/* Team */}
       <section className="max-w-5xl mx-auto px-6 mb-24">
         <h2 className="text-3xl font-bold text-white text-center mb-16">Das Team</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {team.map((member) => (
             <div key={member.initials} className="glass-card p-8 rounded-2xl text-center">
               <div className={`w-16 h-16 ${member.color} rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4 ring-4 ring-black`}>

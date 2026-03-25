@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden pattern-grid">
+    <section className="relative min-h-screen flex items-center pt-16 md:pt-20 overflow-hidden pattern-grid">
       {/* Ambient Background */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 w-full relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
           {/* Text Content */}
           <div className="text-left animate-fade-in-up">
@@ -23,7 +23,7 @@ export default function Hero() {
               <span className="text-blue-400 font-mono text-sm tracking-wide">FLORIAN SALMAN & TEAM</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
               <span className="whitespace-nowrap">
                 Dein{' '}
                 <span className="relative inline-block">
@@ -84,7 +84,7 @@ export default function Hero() {
 
           {/* Image Card */}
           <div
-            className="relative lg:h-[600px] flex items-center justify-center lg:justify-end animate-fade-in-up"
+            className="relative max-h-[350px] lg:h-[600px] lg:max-h-none flex items-center justify-center lg:justify-end animate-fade-in-up"
             style={{ animationDelay: '0.2s' }}
           >
             <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20 group">
@@ -92,6 +92,7 @@ export default function Hero() {
                 src="/images/florian-salman.jpg"
                 alt="Florian Salman"
                 fill
+                priority={true}
                 className="object-cover transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:brightness-110"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">

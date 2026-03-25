@@ -1,15 +1,33 @@
 import Link from 'next/link';
 
 import type { Metadata } from 'next';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'WooCommerce Security',
+  description: '24/7 Malware-Scans, Firewall-Konfiguration und Hacked Site Rescue fuer WooCommerce Shops.',
+  url: 'https://runbycode.de/services/security',
+  provider: {
+    '@type': 'Organization',
+    name: 'RunByCode',
+    url: 'https://runbycode.de',
+  },
+  areaServed: 'DE',
+  serviceType: 'WooCommerce Security',
+};
+
 export const metadata: Metadata = {
-  title: 'WooCommerce Security — Firewall, Malware & Hacked Site Rescue',
-  description: '24/7 Malware-Scans, Firewall-Konfiguration und Hacked Site Rescue fuer WooCommerce Shops. Brute-Force-Schutz und 2FA Einrichtung inklusive.',
+  title: 'WordPress gehackt? WooCommerce Security & Malware Removal | RunByCode',
+  description: 'WordPress gehackt — was tun? RunByCode bereinigt deinen WooCommerce Shop sofort. 24/7 Malware-Scans, Firewall, Brute-Force-Schutz. Hacked Site Rescue kostenlos für Kunden.',
+  keywords: ['WordPress gehackt was tun', 'WooCommerce Security', 'WordPress Malware entfernen', 'WordPress gehackt Hilfe'],
   alternates: { canonical: 'https://runbycode.de/services/security' },
 };
 
 export default function SecurityPage() {
   return (
     <div className="pt-32 pb-24 min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex items-center gap-3 mb-8">
           <div className="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 text-xl">
@@ -56,6 +74,24 @@ export default function SecurityPage() {
               <p className="text-gray-400 text-sm">{item.desc}</p>
             </div>
           ))}
+        </div>
+
+        {/* FAQ — keyword: "wordpress gehackt was tun" */}
+        <div className="bg-brand-card rounded-2xl p-8 border border-white/5 mb-12">
+          <h2 className="text-2xl font-bold text-white mb-8">WordPress gehackt — was tun?</h2>
+          <div className="space-y-6">
+            {[
+              { q: 'WordPress gehackt — was sind die ersten Schritte?', a: 'Sofort den Admin-Zugang sichern (Passwort ändern, 2FA aktivieren), dann Malware-Scan durchführen. Als Kunden-Notfall bereinigen wir deinen gehackten WordPress-Shop innerhalb von Stunden — kostenlos.' },
+              { q: 'Wie kommt es zu einem WordPress-Hack?', a: 'Veraltete Plugins, schwache Passwörter oder anfällige Themes sind die häufigsten Einfallstore. Regelmäßige WordPress-Wartung mit Updates und Monitoring verhindert die meisten Angriffe.' },
+              { q: 'Kann man einen gehackten WooCommerce-Shop retten?', a: 'In fast allen Fällen ja. Wir bereinigen die Malware, schließen die Sicherheitslücke, analysieren wie der Angriff erfolgte und härten den Shop gegen zukünftige Angriffe ab.' },
+              { q: 'Was kostet Hacked Site Rescue?', a: 'Für aktive Kunden mit einem Wartungspaket ist die Bereinigung kostenlos. Für Nicht-Kunden bieten wir einen einmaligen Notfall-Service an — Preis nach Aufwand, spreche uns an.' },
+            ].map((item) => (
+              <div key={item.q} className="border-b border-white/5 pb-6 last:border-0 last:pb-0">
+                <h3 className="font-bold text-white mb-2">{item.q}</h3>
+                <p className="text-gray-400 text-sm">{item.a}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="flex gap-4">

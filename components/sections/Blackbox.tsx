@@ -30,15 +30,16 @@ export default function Blackbox() {
               nichts passiert – ohne zu wissen, was eigentlich gemacht wird.
             </p>
             <p>
-              RunByCode ist anders. Wir verkaufen keine &ldquo;Versicherung&rdquo;, sondern{' '}
+              Als <strong className="text-white">WooCommerce Agentur</strong> verkaufen wir keine
+              &ldquo;Versicherung&rdquo;, sondern{' '}
               <strong className="text-white">Entwicklerzeit</strong>. Ob wir in deinen Stunden
               Updates machen, deinen Checkout optimieren oder ein neues Feature bauen, liegt bei dir.
             </p>
             <p>
               Wir sind eine{' '}
-              <strong className="text-white">Remote-Agentur mit Münchner Herz</strong>. Unser Team
-              arbeitet verteilt, aber unser Standard ist &ldquo;Made in Germany&rdquo;. Wenn du uns
-              schreibst, antwortet kein Bot, sondern ein echter Entwickler.
+              <strong className="text-white">WooCommerce Agentur aus München</strong> mit Remote-Team.
+              Unser Standard ist &ldquo;Made in Germany&rdquo; — präzise, verlässlich, transparent.
+              Wenn du uns schreibst, antwortet kein Bot, sondern ein echter Entwickler.
             </p>
 
             <div className="pt-8">

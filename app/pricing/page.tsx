@@ -3,10 +3,11 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Pakete & Preise — WooCommerce Betreuung',
-  description: 'WooCommerce Wartungspakete von RunByCode. Flexible Stundenpakete statt starre Vertraege — Support, Security, Performance & Custom Dev aus Muenchen.',
+  title: 'WooCommerce Wartung Preise & Pakete | RunByCode',
+  description: 'WooCommerce Wartung Kosten im Überblick. Flexible Stundenpakete ab €490/Monat — kein Jahresvertrag. WooCommerce Shop erstellen lassen oder betreuen — alles aus München.',
+  keywords: ['WooCommerce Wartung Preise', 'WooCommerce Wartung Kosten', 'WooCommerce Shop erstellen lassen Kosten', 'WordPress Wartungsvertrag Kosten'],
   alternates: { canonical: 'https://runbycode.de/pricing' },
-  openGraph: { title: 'Pakete & Preise | RunByCode', url: 'https://runbycode.de/pricing' },
+  openGraph: { title: 'WooCommerce Wartung Preise & Pakete | RunByCode', url: 'https://runbycode.de/pricing' },
 };
 
 const plans = [
@@ -74,11 +75,11 @@ export default function PricingPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`glass-card rounded-2xl p-8 border-2 ${plan.color} relative flex flex-col`}
+              className={`glass-card rounded-2xl p-4 md:p-6 border-2 ${plan.color} relative flex flex-col`}
             >
               {plan.badge && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-4 py-1.5 rounded-full">
@@ -127,10 +128,11 @@ export default function PricingPage() {
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Häufige Fragen</h2>
           <div className="space-y-6">
             {[
+              { q: 'Was kostet WooCommerce Wartung?', a: 'Unsere WooCommerce Wartung startet ab €490/Monat (5 Entwicklerstunden). Das Growth-Paket mit 10 Stunden für €890/Monat ist für die meisten aktiven Shops das sinnvollste. Keine Jahresverträge, monatlich kündbar.' },
+              { q: 'Was kostet ein WooCommerce Shop erstellen lassen?', a: 'Wenn du einen WooCommerce Shop erstellen lassen willst, fallen einmalige Setup-Kosten an, die separat besprochen werden. Danach läuft die laufende Betreuung über unsere Stundenpakete.' },
               { q: 'Was passiert mit nicht genutzten Stunden?', a: 'Nicht genutzte Stunden verfallen am Monatsende. Wir empfehlen das Growth-Paket, da 10 Stunden in der Praxis vollständig ausgenutzt werden.' },
-              { q: 'Kann ich das Paket jederzeit wechseln?', a: 'Ja, du kannst monatlich das Paket ändern. Informiere uns einfach bis zum 25. des laufenden Monats.' },
-              { q: 'Wofür kann ich die Stunden nutzen?', a: 'Für alles rund um deinen WooCommerce-Shop: Updates, Performance, Security, neue Features, Design-Anpassungen, API-Integrationen — komplett flexibel.' },
-              { q: 'Gibt es eine Mindestlaufzeit?', a: 'Kein Jahresvertrag. Monatlich kündbar mit 14 Tagen Vorlauf.' },
+              { q: 'Wofür kann ich die Stunden nutzen?', a: 'Für alles rund um deinen WooCommerce-Shop: WordPress Wartung, Performance-Optimierung, Security, neue Features, Design-Anpassungen, API-Integrationen — komplett flexibel.' },
+              { q: 'Gibt es eine Mindestlaufzeit?', a: 'Kein Jahresvertrag. Unsere WooCommerce Betreuung läuft monatlich kündbar mit 14 Tagen Vorlauf.' },
             ].map((item) => (
               <div key={item.q} className="border-b border-white/5 pb-6 last:border-0 last:pb-0">
                 <h3 className="font-bold text-white mb-2">{item.q}</h3>

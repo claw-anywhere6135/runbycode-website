@@ -1,15 +1,33 @@
 import Link from 'next/link';
 
 import type { Metadata } from 'next';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'WooCommerce Performance Optimierung',
+  description: 'Core Web Vitals, Datenbank-Tuning, Asset-Minification und CDN. Google PageSpeed 90+ fuer WooCommerce Shops.',
+  url: 'https://runbycode.de/services/performance',
+  provider: {
+    '@type': 'Organization',
+    name: 'RunByCode',
+    url: 'https://runbycode.de',
+  },
+  areaServed: 'DE',
+  serviceType: 'WooCommerce Performance Optimierung',
+};
+
 export const metadata: Metadata = {
-  title: 'WooCommerce Performance Optimierung — Google PageSpeed 90+',
-  description: 'WooCommerce Performance-Optimierung aus Muenchen: Core Web Vitals, Datenbank-Tuning, Asset-Minification und CDN. Wir bringen deinen Shop auf Google PageSpeed 90+.',
+  title: 'WordPress PageSpeed Optimierung & WooCommerce Ladezeit | RunByCode',
+  description: 'WordPress PageSpeed Optimierung & WooCommerce Ladezeit verbessern. Wir bringen deinen Shop auf Google PageSpeed 90+. Core Web Vitals, Caching, CDN — aus München.',
+  keywords: ['WordPress PageSpeed Optimierung', 'WooCommerce Performance Optimierung', 'WordPress Ladezeit optimieren', 'WordPress Speed Optimierung'],
   alternates: { canonical: 'https://runbycode.de/services/performance' },
 };
 
 export default function PerformancePage() {
   return (
     <div className="pt-32 pb-24 min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex items-center gap-3 mb-8">
           <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl">

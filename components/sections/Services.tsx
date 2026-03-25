@@ -106,7 +106,7 @@ export default function Services() {
             >
               Mehr zu B2B Shop Lösungen <i className="fa-solid fa-arrow-right text-xs" />
             </Link>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-1">
               {['PHP 8.x', 'React / Vue', 'REST API', 'Stripe / PayPal Integrationen'].map((tag) => (
                 <span key={tag} className="px-3 py-1 border border-white/10 rounded-full text-xs text-gray-400">
                   {tag}

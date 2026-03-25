@@ -1,6 +1,22 @@
 import Link from 'next/link';
 
 import type { Metadata } from 'next';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'WooCommerce B2B Shop Entwicklung',
+  description: 'WooCommerce B2B Shop Entwicklung: Kundengruppen, Rollenpreise, ERP/CRM-Integration und Custom Checkout.',
+  url: 'https://runbycode.de/services/b2b-shops',
+  provider: {
+    '@type': 'Organization',
+    name: 'RunByCode',
+    url: 'https://runbycode.de',
+  },
+  areaServed: 'DE',
+  serviceType: 'WooCommerce B2B Shop Entwicklung',
+};
+
 export const metadata: Metadata = {
   title: 'WooCommerce B2B Shop — Custom Development & Integrationen',
   description: 'WooCommerce B2B Shop Entwicklung: Kundengruppen, Rollenpreise, ERP/CRM-Integration, Custom Checkout und komplexe Plugin-Entwicklung.',
@@ -10,6 +26,7 @@ export const metadata: Metadata = {
 export default function B2BPage() {
   return (
     <div className="pt-32 pb-24 min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex items-center gap-3 mb-8">
           <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400 text-xl">

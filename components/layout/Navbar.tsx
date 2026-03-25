@@ -113,7 +113,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[#050505] transform transition-transform duration-300 md:hidden flex flex-col pt-32 px-6 ${
+        className={`fixed inset-0 z-40 bg-[#050505] transform transition-transform duration-300 md:hidden flex flex-col pt-24 md:pt-32 px-6 ${
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

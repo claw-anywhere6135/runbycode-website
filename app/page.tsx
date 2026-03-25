@@ -3,6 +3,7 @@ import Hero from '@/components/sections/Hero';
 import LogoBar from '@/components/sections/LogoBar';
 import Blackbox from '@/components/sections/Blackbox';
 import Services from '@/components/sections/Services';
+import WhyRunByCode from '@/components/sections/WhyRunByCode';
 import ContactForm from '@/components/sections/ContactForm';
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function HomePage() {
       <LogoBar />
       <Blackbox />
       <Services />
+      <WhyRunByCode />
       <ContactForm />
     </>
   );
