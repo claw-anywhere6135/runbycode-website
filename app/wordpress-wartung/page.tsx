@@ -89,45 +89,73 @@ export default function WordPressWartungPage() {
       />
 
       <div className="max-w-4xl mx-auto px-6">
-        {/* Badge */}
-        <div className="flex items-center gap-3 mb-8">
-          <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl">
-            <i className="fa-brands fa-wordpress" />
+        {/* Hero — relative wrapper for ambient glow */}
+        <div className="relative">
+          <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-600/10 blur-3xl rounded-full pointer-events-none" />
+
+          {/* Badge */}
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl">
+              <i className="fa-brands fa-wordpress" />
+            </div>
+            <span className="text-xs font-mono bg-blue-500/10 text-blue-300 px-2 py-1 rounded uppercase tracking-wider">
+              WordPress Wartung
+            </span>
           </div>
-          <span className="text-xs font-mono bg-blue-500/10 text-blue-300 px-2 py-1 rounded uppercase tracking-wider">
-            WordPress Wartung
-          </span>
+
+          {/* H1 */}
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
+            WordPress Wartung in Muenchen —{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+              Professionell. Zuverlaessig. Transparent.
+            </span>
+          </h1>
+
+          {/* Intro */}
+          <p className="text-lg text-gray-400 mb-8 max-w-3xl leading-relaxed">
+            WordPress Wartung ist keine optionale Nebensache — sie ist aktiver Schutz fuer deine
+            Website, deine Daten und deine Kunden. Professionelle{' '}
+            <strong className="text-white">WordPress Betreuung</strong> umfasst systematische
+            Updates auf Staging, Uptime-Monitoring, automatische Backups und transparentes
+            Reporting. Als{' '}
+            <strong className="text-white">WordPress Wartung Agentur aus Muenchen</strong> betreuen
+            wir ueber 40 WordPress-Projekte — von Unternehmenswebsites bis hin zu komplexen
+            WooCommerce-Shops.
+          </p>
         </div>
 
-        {/* H1 */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
-          WordPress Wartung in Muenchen —{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-            Professionell. Zuverlaessig. Transparent.
-          </span>
-        </h1>
-
-        {/* Intro */}
-        <p className="text-lg text-gray-400 mb-12 max-w-3xl leading-relaxed">
-          WordPress Wartung ist keine optionale Nebensache — sie ist aktiver Schutz fuer deine
-          Website, deine Daten und deine Kunden. Professionelle{' '}
-          <strong className="text-white">WordPress Betreuung</strong> umfasst systematische
-          Updates auf Staging, Uptime-Monitoring, automatische Backups und transparentes
-          Reporting. Als{' '}
-          <strong className="text-white">WordPress Wartung Agentur aus Muenchen</strong> betreuen
-          wir ueber 40 WordPress-Projekte — von Unternehmenswebsites bis hin zu komplexen
-          WooCommerce-Shops.
-        </p>
+        {/* Trust Badge Row */}
+        <div className="flex flex-wrap items-center gap-6 mb-16 pb-12 border-b border-white/5">
+          <div className="flex items-center gap-2">
+            <div className="flex text-yellow-400 text-sm">{'★★★★★'}</div>
+            <span className="text-gray-400 text-sm">5.0 / 5.0</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-400 text-sm">
+            <i className="fa-solid fa-shield-check text-green-400" />
+            <span>40+ betreute Projekte</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1 bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-mono px-2 py-1 rounded-full">
+              <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+              Antwort ≤ 24h
+            </span>
+          </div>
+        </div>
 
         {/* Feature Cards */}
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
           Was unsere WordPress Wartung umfasst
         </h2>
-        <div className="grid md:grid-cols-2 gap-4 mb-16">
+        <div className="grid md:grid-cols-2 gap-4 mb-20">
           {features.map((f) => (
-            <div key={f.title} className="glass-card p-6 rounded-xl border border-white/5 bg-white/2">
+            <div
+              key={f.title}
+              className="group glass-card p-6 rounded-xl border border-white/5 bg-white/2 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-200"
+            >
               <div className="flex items-center gap-3 mb-3">
-                <i className={`${f.icon} text-blue-400`} />
+                <div className="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center shrink-0">
+                  <i className={`${f.icon} text-blue-400 group-hover:text-blue-300 transition-colors`} />
+                </div>
                 <h3 className="font-bold text-white">{f.title}</h3>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
@@ -139,7 +167,7 @@ export default function WordPressWartungPage() {
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
           Warum ist WordPress Wartung so wichtig?
         </h2>
-        <div className="space-y-4 mb-12">
+        <div className="space-y-4 mb-20">
           <p className="text-gray-400 leading-relaxed">
             WordPress ist das meistgenutzte CMS der Welt — und genau deshalb das attraktivste
             Angriffsziel. Ungepatchte Sicherheitsluecken in WordPress-Plugins und dem Core werden
@@ -156,7 +184,7 @@ export default function WordPressWartungPage() {
             du solche Probleme erst wenn deine Besucher sie melden — oft zu spaet. Mit unserer
             systematischen WordPress-Betreuung testen wir alles zuerst auf Staging.
           </p>
-          <p className="text-gray-400 leading-relaxed mb-12">
+          <p className="text-gray-400 leading-relaxed">
             Datenverlust durch fehlende Backups ist ein weiteres reales Szenario. Ob Serverausfall,
             Hacking-Angriff oder versehentliches Loeschen — ohne aktuelle Backups ist der Schaden
             moeglicherweise irreparabel. Unser Wartungsvertrag beinhaltet taeglich vollstaendige
@@ -169,7 +197,7 @@ export default function WordPressWartungPage() {
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
           Unser Wartungs-Prozess in 4 Schritten
         </h2>
-        <div className="space-y-4 mb-16">
+        <div className="space-y-4 mb-20">
           {[
             {
               step: '01',
@@ -194,11 +222,11 @@ export default function WordPressWartungPage() {
           ].map((item) => (
             <div
               key={item.step}
-              className="flex gap-6 p-5 glass-card rounded-xl border border-white/5"
+              className="flex gap-5 p-5 glass-card rounded-xl border border-white/5 hover:border-blue-500/20 transition-all duration-200"
             >
-              <span className="text-3xl font-bold text-blue-500/30 font-mono leading-tight mt-1 min-w-[2.5rem]">
+              <div className="w-12 h-12 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 font-bold font-mono text-sm shrink-0">
                 {item.step}
-              </span>
+              </div>
               <div>
                 <h3 className="font-bold text-white mb-1">{item.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
@@ -211,7 +239,10 @@ export default function WordPressWartungPage() {
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
           WordPress Wartung Pakete
         </h2>
-        <div className="bg-blue-500/5 border border-blue-500/20 rounded-2xl p-8 mb-16">
+        <div className="bg-blue-500/5 border border-blue-500/20 rounded-2xl p-8 mb-20">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-xs font-mono text-blue-400 bg-blue-500/10 px-2 py-1 rounded">PAKETE</span>
+          </div>
           <p className="text-gray-400 mb-2">
             Alle Pakete beinhalten Staging-Updates, Uptime-Monitoring, Backups und monatliches
             Reporting. Starter fuer kleinere Websites, Growth fuer aktive Projekte,
@@ -219,12 +250,12 @@ export default function WordPressWartungPage() {
           </p>
           <p className="text-gray-400 mb-6">
             WordPress Wartung startet ab{' '}
-            <strong className="text-white">490 Euro pro Monat</strong> — monatlich kuendbar,
-            kein Jahresvertrag.
+            <span className="text-2xl font-bold text-white">490 Euro</span>{' '}
+            pro Monat — monatlich kuendbar, kein Jahresvertrag.
           </p>
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-500 transition-all btn-shine"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/30 hover:shadow-blue-500/30 btn-shine"
           >
             Alle Pakete ansehen
             <i className="fa-solid fa-arrow-right text-sm" />
@@ -235,12 +266,18 @@ export default function WordPressWartungPage() {
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
           Haeufige Fragen zur WordPress Wartung
         </h2>
-        <div className="bg-white/2 border border-white/5 rounded-2xl p-8 mb-16">
+        <div className="bg-white/2 border border-white/5 rounded-2xl p-8 mb-20">
           <div className="space-y-6">
             {faqItems.map((item) => (
               <div key={item.q} className="border-b border-white/5 pb-6 last:border-0 last:pb-0">
-                <h3 className="font-bold text-white mb-2">{item.q}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.a}</p>
+                <div className="flex items-start gap-3 mb-2">
+                  <span className="w-5 h-5 bg-blue-500/10 rounded text-blue-400 text-xs flex items-center justify-center shrink-0 mt-0.5 font-mono font-bold">Q</span>
+                  <h3 className="font-bold text-white">{item.q}</h3>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="w-5 h-5 bg-white/5 rounded text-gray-500 text-xs flex items-center justify-center shrink-0 mt-0.5 font-mono font-bold">A</span>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.a}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -253,7 +290,7 @@ export default function WordPressWartungPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold rounded-xl hover:from-blue-500 hover:to-blue-700 transition-all shadow-lg shadow-blue-900/30 btn-shine border border-white/10"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold rounded-xl hover:from-blue-500 hover:to-blue-700 transition-all shadow-lg shadow-blue-900/30 hover:shadow-blue-500/30 btn-shine border border-white/10"
           >
             Jetzt Beratungsgespraech buchen
             <i className="fa-solid fa-arrow-right" />
