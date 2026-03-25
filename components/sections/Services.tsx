@@ -66,14 +66,15 @@ export default function Services() {
           </div>
 
           {/* Updates */}
-          <div className="glass-card p-8 rounded-2xl group hover:border-green-500/30 transition-all duration-500">
+          <div className="glass-card p-8 rounded-2xl group hover:border-green-500/30 transition-all duration-500 flex flex-col">
             <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-400 text-xl mb-6">
               <i className="fa-solid fa-rotate" />
             </div>
             <h3 className="text-xl font-bold text-white mb-3">Sichere Updates</h3>
             <p className="text-gray-400 text-sm mb-3">
               Wir drücken nicht einfach &ldquo;Update&rdquo;. Wir erstellen einen Staging-Clone,
-              führen Updates durch und testen den Checkout manuell.
+              führen Updates durch und testen den Checkout manuell. Kein blindes Klicken — jede
+              Aktualisierung wird auf Herz und Nieren geprüft, bevor sie live geht.
             </p>
             <Link
               href="/services/maintenance"
@@ -81,33 +82,35 @@ export default function Services() {
             >
               Mehr zu Wartung & Pflege <i className="fa-solid fa-arrow-right text-[10px]" />
             </Link>
-            <div className="text-xs font-mono text-green-400 bg-green-900/20 inline-block px-2 py-1 rounded">
-              Zero Downtime Strategy
+            <div className="mt-auto space-y-2 text-xs text-gray-500">
+              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Staging-Clone vor jedem Update</div>
+              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Manueller Checkout-Test</div>
+              <div className="text-xs font-mono text-green-400 bg-green-900/20 inline-block px-2 py-1 rounded mt-2">Zero Downtime Strategy</div>
             </div>
           </div>
 
-          {/* Custom Development — wide */}
-          <div className="md:col-span-2 glass-card p-8 rounded-2xl group hover:border-purple-500/30 transition-all duration-500 bg-gradient-to-br from-brand-card to-purple-900/10">
+          {/* Custom Development */}
+          <div className="glass-card p-8 rounded-2xl group hover:border-purple-500/30 transition-all duration-500 bg-gradient-to-br from-brand-card to-purple-900/10 flex flex-col">
             <div className="flex items-start justify-between mb-6">
               <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400 text-xl">
                 <i className="fa-solid fa-code" />
               </div>
               <span className="text-xs font-mono bg-purple-500/10 text-purple-300 px-2 py-1 rounded">FEATURE DEVELOPMENT</span>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Custom Development</h3>
-            <p className="text-gray-400 mb-4 max-w-lg">
+            <h3 className="text-xl font-bold text-white mb-3">Custom Development</h3>
+            <p className="text-gray-400 text-sm mb-3">
               Dein Stundenkontingent ist flexibel. Nutze es nicht nur für Wartung, sondern für
               Weiterentwicklung. Wir bauen Custom Plugins, passen Checkout-Flows an oder
               integrieren APIs (ERP, CRM).
             </p>
             <Link
               href="/services/b2b-shops"
-              className="inline-flex items-center gap-1 text-purple-400 hover:text-purple-300 text-sm mb-6 transition-colors"
+              className="inline-flex items-center gap-1 text-purple-400 hover:text-purple-300 text-sm mb-4 transition-colors"
             >
-              Mehr zu B2B Shop Lösungen <i className="fa-solid fa-arrow-right text-xs" />
+              Mehr zu B2B Shop Lösungen <i className="fa-solid fa-arrow-right text-[10px]" />
             </Link>
-            <div className="flex flex-wrap gap-1">
-              {['PHP 8.x', 'React / Vue', 'REST API', 'Stripe / PayPal Integrationen'].map((tag) => (
+            <div className="mt-auto flex flex-wrap gap-1">
+              {['PHP 8.x', 'React / Vue', 'REST API', 'Stripe / PayPal'].map((tag) => (
                 <span key={tag} className="px-3 py-1 border border-white/10 rounded-full text-xs text-gray-400">
                   {tag}
                 </span>
@@ -116,15 +119,21 @@ export default function Services() {
           </div>
 
           {/* Backup & Uptime */}
-          <div className="glass-card p-8 rounded-2xl group hover:border-orange-500/30 transition-all duration-500">
+          <div className="glass-card p-8 rounded-2xl group hover:border-orange-500/30 transition-all duration-500 flex flex-col">
             <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-400 text-xl mb-6">
               <i className="fa-solid fa-server" />
             </div>
             <h3 className="text-xl font-bold text-white mb-3">Backup & Uptime</h3>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-400 text-sm mb-3">
               Echtzeit-Backups auf externen Servern (AWS S3) und minütliches Uptime-Monitoring.
-              Wenn dein Shop down ist, wissen wir es vor dir.
+              Wenn dein Shop down ist, wissen wir es vor dir — nicht deine Kunden. Automatische
+              Wiederherstellung inklusive.
             </p>
+            <div className="mt-auto space-y-2 text-xs text-gray-500">
+              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-orange-400" /> AWS S3 Off-Site Backups</div>
+              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-orange-400" /> Minütliches Uptime-Monitoring</div>
+              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-orange-400" /> Sofort-Alert bei Ausfall</div>
+            </div>
           </div>
 
         </div>
