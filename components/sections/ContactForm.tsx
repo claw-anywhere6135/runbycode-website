@@ -19,10 +19,11 @@ export default function ContactForm() {
     <section id="kontakt" className="py-24 relative bg-white dark:bg-brand-card pattern-diagonal">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Lass uns sprechen</h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg">
-            Klingt nach einem Fit? Schick uns kurz was — wir melden uns innerhalb
-            von 24 Stunden.
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Sprechen wir über Ihre Website.</h2>
+          <p className="text-gray-600 dark:text-gray-300 text-lg max-w-xl mx-auto">
+            Kein unverbindliches Erstgespräch das in drei Wochen stattfindet. Beschreiben Sie kurz
+            was Sie beschäftigt — Florian meldet sich mit einer konkreten Einschätzung. Kostenlos,
+            ohne Verkaufspitch.
           </p>
         </div>
 

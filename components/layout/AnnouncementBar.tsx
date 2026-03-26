@@ -10,14 +10,13 @@ export default function AnnouncementBar() {
       <div className="relative z-10 flex items-center justify-center gap-2">
         <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse" />
         <span>
-          Aktuell verfügbar:{' '}
-          <strong>Kostenloses Shop-Audit</strong> für Neukunden (Nur 3 Slots/Monat)
+          Jetzt verfügbar für neue Projekte — Antwort innerhalb von 24h
         </span>
         <Link
           href="/contact"
-          className="underline decoration-white/50 hover:decoration-white ml-2"
+          className="underline decoration-white/50 hover:decoration-white ml-2 font-semibold"
         >
-          Jetzt sichern &rarr;
+          Anfrage stellen &rarr;
         </Link>
       </div>
     </div>

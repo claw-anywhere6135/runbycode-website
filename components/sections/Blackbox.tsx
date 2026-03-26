@@ -10,8 +10,7 @@ export default function Blackbox() {
           <div className="sticky top-24">
             <span className="text-8xl font-bold absolute -top-10 -left-10 select-none" style={{ color: 'rgba(0,0,0,0.08)' }}>WARUM</span>
             <h2 className="text-3xl font-bold relative z-10 section-themed-strong">
-              Schluss mit der <br />
-              <span className="text-blue-500">Blackbox.</span>
+              Schluss damit, dass Sie nicht wissen was passiert.
             </h2>
             <div className="mt-6 inline-flex items-center gap-2 bg-gray-100 dark:bg-white/5 rounded-full px-4 py-2 border border-gray-300 dark:border-white/10">
               <span className="flex h-2 w-2 relative">
@@ -25,21 +24,19 @@ export default function Blackbox() {
           {/* Right — Content */}
           <div className="text-lg space-y-6 leading-relaxed section-themed-text">
             <p>
-              <strong className="section-themed-strong">Seien wir ehrlich:</strong>{' '}Die meisten
-              &ldquo;Wartungsverträge&rdquo; sind Versicherungspolicen. Du zahlst und hoffst, dass
-              nichts passiert – ohne zu wissen, was eigentlich gemacht wird.
+              Die meisten Unternehmen haben eine Agentur die &ldquo;die Website macht.&rdquo; Jede
+              Anfrage geht ins Ticket-System. Die Antwort kommt nach drei Wochen. Und wer dabei war
+              als das letzte grosse Update gebaut wurde? Schon lange weg.
             </p>
             <p>
-              Als <strong className="section-themed-strong">WooCommerce Agentur</strong>{' '}verkaufen wir keine
-              &ldquo;Versicherung&rdquo;, sondern{' '}
-              <strong className="section-themed-strong">konkrete Entwicklungsarbeit</strong>. Ob wir in deinen Stunden
-              Updates machen, deinen Checkout optimieren oder ein neues Feature bauen, liegt bei dir.
+              Bei RunByCode haben Sie einen festen Ansprechpartner — von der ersten Anfrage bis zum
+              laufenden Betrieb. <strong className="section-themed-strong">Florian kennt Ihre Website.</strong>{' '}
+              Sie müssen nicht jedes Mal neu erklären wie Ihr Unternehmen funktioniert.
             </p>
             <p>
-              Wir sind eine{' '}
-              <strong className="section-themed-strong">WooCommerce Agentur aus München</strong>{' '}mit Remote-Team.
-              Unser Standard ist &ldquo;Made in Germany&rdquo; — präzise, verlässlich, transparent.
-              Wenn du uns schreibst, antwortet kein Bot, sondern ein echter Entwickler.
+              Wir arbeiten mit Marketing-Teams zusammen, nicht an ihnen vorbei. Sie bringen die
+              Ziele, wir bringen die Umsetzung. Was genau gemacht wird, wann es fertig ist und was
+              es kostet — das klären wir bevor wir anfangen.
             </p>
 
             <div className="pt-8">
@@ -54,10 +51,10 @@ export default function Blackbox() {
 
             <div className="mt-8">
               <Link
-                href="/pricing"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/30 btn-shine"
               >
-                <span>Jetzt Partner werden</span>
+                <span>Jetzt Anfrage schicken</span>
                 <i className="fa-solid fa-arrow-right" />
               </Link>
             </div>
