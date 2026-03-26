@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import SectionDivider from '@/components/ui/SectionDivider';
+import HorizontalScrollCards from '@/components/ui/HorizontalScrollCards';
+import GridBackground from '@/components/ui/GridBackground';
 
 export const metadata: Metadata = {
   title: 'WooCommerce Wartung & Betreuung Muenchen | RunByCode',
@@ -29,33 +32,46 @@ const features = [
     icon: 'fa-solid fa-clone',
     title: 'Staging-Updates',
     desc: 'Jedes WooCommerce-Update laeuft zuerst auf einer exakten Kopie deines Live-Shops. Keine blinden Updates — erst testen, dann live schalten.',
+    accent: 'blue',
   },
   {
     icon: 'fa-solid fa-cart-check',
     title: 'Checkout-Tests',
     desc: 'Nach jedem Update pruefen wir manuell: Warenkorb, Kasse, Zahlungsabwicklung, Bestellbestaetigung. Checkout-Abbrueche durch Updates passieren bei uns nicht.',
+    accent: 'green',
   },
   {
     icon: 'fa-solid fa-shield-check',
     title: 'Zero-Downtime',
     desc: 'Unser Deployment-Prozess stellt sicher, dass dein Shop waehrend der Wartung erreichbar bleibt. Kein Wartungsmodus, keine verlorenen Bestellungen.',
+    accent: 'blue',
   },
   {
     icon: 'fa-solid fa-triangle-exclamation',
     title: 'Error-Log-Monitoring',
     desc: 'PHP-Fehler, JavaScript-Exceptions und WooCommerce-Logs werden taeglich ausgewertet. Wir sehen Probleme bevor deine Kunden sie sehen.',
+    accent: 'amber',
   },
   {
     icon: 'fa-solid fa-database',
     title: 'Datenbank-Optimierung',
     desc: 'WooCommerce-Datenbanken wachsen schnell. Wir bereinigen Transients, optimieren Tabellen und halten deine DB performant — fuer schnelle Ladezeiten.',
+    accent: 'purple',
   },
   {
     icon: 'fa-solid fa-puzzle-piece',
     title: 'Plugin-Kompatibilitaet',
     desc: 'Vor jedem Update pruefen wir Kompatibilitaet zwischen WooCommerce Core, Plugins und Theme. Plugin-Konflikte werden erkannt, bevor sie Probleme verursachen.',
+    accent: 'blue',
   },
 ];
+
+const accentMap: Record<string, { bg: string; border: string; text: string; iconBg: string }> = {
+  blue:   { bg: 'hover:bg-blue-500/5',   border: 'hover:border-blue-500/30',   text: 'group-hover:text-blue-300',   iconBg: 'bg-blue-500/10' },
+  green:  { bg: 'hover:bg-green-500/5',  border: 'hover:border-green-500/30',  text: 'group-hover:text-green-300',  iconBg: 'bg-green-500/10' },
+  amber:  { bg: 'hover:bg-amber-500/5',  border: 'hover:border-amber-500/30',  text: 'group-hover:text-amber-300',  iconBg: 'bg-amber-500/10' },
+  purple: { bg: 'hover:bg-purple-500/5', border: 'hover:border-purple-500/30', text: 'group-hover:text-purple-300', iconBg: 'bg-purple-500/10' },
+};
 
 const faqItems = [
   {
@@ -89,41 +105,45 @@ export default function WooCommerceWartungPage() {
       />
 
       <div className="max-w-4xl mx-auto px-6">
-        {/* Hero — relative wrapper for ambient glow */}
-        <div className="relative">
-          <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-600/10 blur-3xl rounded-full pointer-events-none" />
 
-          {/* Badge */}
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl">
-              <i className="fa-solid fa-rotate" />
+        {/* ── Hero ── */}
+        <div className="relative pattern-grid">
+          <GridBackground arc />
+          <div className="relative z-10">
+            <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-600/10 blur-3xl rounded-full pointer-events-none" />
+
+            {/* Badge */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl">
+                <i className="fa-solid fa-rotate" />
+              </div>
+              <span className="text-xs font-mono bg-blue-500/10 text-blue-300 px-2 py-1 rounded uppercase tracking-wider">
+                WooCommerce Wartung
+              </span>
             </div>
-            <span className="text-xs font-mono bg-blue-500/10 text-blue-300 px-2 py-1 rounded uppercase tracking-wider">
-              WooCommerce Wartung
-            </span>
+
+            {/* H1 */}
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white animate-fade-in-up">
+              WooCommerce Wartung in Muenchen —{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+                Sicher. Transparent. Ohne Ausfaelle.
+              </span>
+            </h1>
+
+            {/* Intro */}
+            <p className="text-lg text-gray-400 mb-8 max-w-3xl leading-relaxed animate-fade-in-up delay-100">
+              WooCommerce Wartung bedeutet mehr als einmal im Monat auf &ldquo;Update&rdquo; zu
+              klicken. Professionelle <strong className="text-white">WooCommerce Betreuung</strong>{' '}
+              umfasst Staging-Tests, Checkout-Pruefungen, Error-Log-Auswertung und einen definierten
+              Rollback-Plan — damit dein Shop immer laeuft und keine Bestellung verloren geht. Als{' '}
+              <strong className="text-white">WooCommerce Wartung Agentur aus Muenchen</strong> betreuen
+              wir ueber 40 aktive High-Performance-Shops mit diesem Standard.
+            </p>
           </div>
-
-          {/* H1 */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
-            WooCommerce Wartung in Muenchen —{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-              Sicher. Transparent. Ohne Ausfaelle.
-            </span>
-          </h1>
-
-          {/* Intro */}
-          <p className="text-lg text-gray-400 mb-8 max-w-3xl leading-relaxed">
-            WooCommerce Wartung bedeutet mehr als einmal im Monat auf &ldquo;Update&rdquo; zu
-            klicken. Professionelle <strong className="text-white">WooCommerce Betreuung</strong>{' '}
-            umfasst Staging-Tests, Checkout-Pruefungen, Error-Log-Auswertung und einen definierten
-            Rollback-Plan — damit dein Shop immer laeuft und keine Bestellung verloren geht. Als{' '}
-            <strong className="text-white">WooCommerce Wartung Agentur aus Muenchen</strong> betreuen
-            wir ueber 40 aktive High-Performance-Shops mit diesem Standard.
-          </p>
         </div>
 
         {/* Trust Badge Row */}
-        <div className="flex flex-wrap items-center gap-6 mb-16 pb-12 border-b border-white/5">
+        <div className="flex flex-wrap items-center gap-6 mb-10 pb-10 border-b border-white/5">
           <div className="flex items-center gap-2">
             <div className="flex text-yellow-400 text-sm">{'★★★★★'}</div>
             <span className="text-gray-400 text-sm">5.0 / 5.0</span>
@@ -135,132 +155,150 @@ export default function WooCommerceWartungPage() {
           <div className="flex items-center gap-2">
             <span className="inline-flex items-center gap-1 bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-mono px-2 py-1 rounded-full">
               <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-              Antwort ≤ 24h
+              Antwort &le; 24h
             </span>
           </div>
         </div>
 
-        {/* Feature Cards */}
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-          Was unsere WooCommerce Wartung umfasst
-        </h2>
-        <div className="grid md:grid-cols-2 gap-4 mb-20">
-          {features.map((f) => (
-            <div
-              key={f.title}
-              className="group glass-card p-6 rounded-xl border border-white/5 bg-white/2 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-200"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center shrink-0">
-                  <i className={`${f.icon} text-blue-400 group-hover:text-blue-300 transition-colors`} />
-                </div>
-                <h3 className="font-bold text-white">{f.title}</h3>
-              </div>
-              <p className="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
-        </div>
+        <SectionDivider label="LEISTUNGEN" />
 
-        {/* Why */}
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-          Warum ist WooCommerce Wartung so wichtig?
-        </h2>
-        <div className="space-y-4 mb-20">
-          <p className="text-gray-400 leading-relaxed">
-            WooCommerce ist eines der komplexesten Open-Source-Systeme fuer E-Commerce — und damit auch
-            eines der haeufigsten Angriffsziele. Ungepatchte Sicherheitsluecken in WooCommerce-Plugins
-            sind der haeufigste Einstiegspunkt fuer Angreifer. Ein einziges ungepflegtes Plugin kann
-            ausreichen, um einen kompletten Shop zu kompromittieren, Kundendaten zu stehlen oder
-            SEO-Rankings durch eingespiegte Malware zu zerstoeren.
-          </p>
-          <p className="text-gray-400 leading-relaxed">
-            Plugin-Konflikte sind eine weitere grosse Gefahr. WooCommerce-Core-Updates sind nicht immer
-            rueckwaertskompatibel mit allen Plugins. Ohne Staging-Umgebung und Kompatibilitaetspruefung
-            koennen Updates den Checkout lahmlegen, Zahlungs-Gateways ausschalten oder ganze
-            Produktseiten unbrauchbar machen. Jede Stunde Downtime bedeutet direkte Umsatzverluste.
-          </p>
-          <p className="text-gray-400 leading-relaxed">
-            Checkout-Abbrueche durch technische Fehler sind besonders schaedlich — nicht nur weil der
-            Umsatz fehlt, sondern weil veraeaergerte Kunden selten zurueckkommen. Regelmaessige
-            WooCommerce-Wartung mit manuellen Checkout-Tests nach jedem Update verhindert genau diese
-            Szenarien. Wartung ist keine Ausgabe — sie ist Umsatzschutz.
-          </p>
-        </div>
-
-        {/* Process */}
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-          Unser Wartungs-Prozess in 4 Schritten
-        </h2>
-        <div className="space-y-4 mb-20">
-          {[
-            {
-              step: '01',
-              title: 'Staging-Clone erstellen',
-              desc: 'Bevor wir irgendetwas anfassen, erstellen wir eine exakte Kopie deines Live-Shops auf der Staging-Umgebung — inklusive Datenbank, Medien und Konfiguration.',
-            },
-            {
-              step: '02',
-              title: 'Updates testen',
-              desc: 'WooCommerce Core, alle Plugins und das Theme werden auf Staging eingespielt. Wir pruefen auf PHP-Errors, visuelle Brueche und Funktionsverluste.',
-            },
-            {
-              step: '03',
-              title: 'Checkout manuell pruefen',
-              desc: 'Wir legen eine Testbestellung durch den kompletten Checkout — Warenkorb, Versand, Zahlung, Bestellbestaetigung. Erst bei gruener Ampel geht es weiter.',
-            },
-            {
-              step: '04',
-              title: 'Live-Deployment',
-              desc: 'Nach erfolgreichem Test wird auf Live deployt — mit vorherigem Backup als Sicherheitsnetz. Der gesamte Prozess ist dokumentiert und nachvollziehbar.',
-            },
-          ].map((item) => (
-            <div
-              key={item.step}
-              className="flex gap-5 p-5 glass-card rounded-xl border border-white/5 hover:border-blue-500/20 transition-all duration-200"
-            >
-              <div className="w-12 h-12 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 font-bold font-mono text-sm shrink-0">
-                {item.step}
-              </div>
-              <div>
-                <h3 className="font-bold text-white mb-1">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Pricing CTA */}
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-          WooCommerce Wartung Pakete
-        </h2>
-        <div className="bg-blue-500/5 border border-blue-500/20 rounded-2xl p-8 mb-20">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-xs font-mono text-blue-400 bg-blue-500/10 px-2 py-1 rounded">PAKETE</span>
-          </div>
-          <p className="text-gray-400 mb-2">
-            Von Starter (5 Stunden/Monat) bis Enterprise (individuell) — alle Pakete beinhalten
-            Staging-Updates, Monitoring, Backups und monatliches Reporting. Monatlich kuendbar,
-            kein Jahresvertrag.
-          </p>
-          <p className="text-gray-400 mb-6">
-            Preise starten ab{' '}
-            <span className="text-2xl font-bold text-white">490 Euro</span>{' '}
-            pro Monat fuer professionelle WooCommerce Wartung aus Muenchen.
-          </p>
-          <Link
-            href="/pricing"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/30 hover:shadow-blue-500/30 btn-shine"
+        {/* ── Feature Cards — Horizontal Scroll ── */}
+        <div className="mb-4">
+          <HorizontalScrollCards
+            title="Was dein Shop bekommt"
+            subtitle="Jede Leistung ist Teil eines durchdachten Prozesses — nicht nur eine Checkbox."
+            badge="INKLUDIERT"
           >
-            Alle Pakete ansehen
-            <i className="fa-solid fa-arrow-right text-sm" />
-          </Link>
+            {features.map((f) => {
+              const a = accentMap[f.accent] ?? accentMap.blue;
+              return (
+                <div
+                  key={f.title}
+                  className={`group snap-start flex-shrink-0 w-[280px] md:w-[300px] glass-card p-6 rounded-xl border border-white/5 ${a.border} ${a.bg} transition-all duration-200`}
+                >
+                  <div className={`w-10 h-10 ${a.iconBg} rounded-lg flex items-center justify-center mb-4`}>
+                    <i className={`${f.icon} text-blue-400 ${a.text} transition-colors`} />
+                  </div>
+                  <h3 className="font-bold text-white mb-2">{f.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
+                </div>
+              );
+            })}
+          </HorizontalScrollCards>
         </div>
 
-        {/* FAQ */}
+        <SectionDivider ctaText="Pakete ansehen" ctaHref="/pricing" />
+
+        {/* ── Why Section ── */}
+        <div className="relative mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+            Warum ist WooCommerce Wartung so wichtig?
+          </h2>
+          <div className="space-y-4">
+            <p className="text-gray-400 leading-relaxed">
+              WooCommerce ist eines der komplexesten Open-Source-Systeme fuer E-Commerce — und damit auch
+              eines der haeufigsten Angriffsziele. Ungepatchte Sicherheitsluecken in WooCommerce-Plugins
+              sind der haeufigste Einstiegspunkt fuer Angreifer. Ein einziges ungepflegtes Plugin kann
+              ausreichen, um einen kompletten Shop zu kompromittieren, Kundendaten zu stehlen oder
+              SEO-Rankings durch eingespiegte Malware zu zerstoeren.
+            </p>
+            <p className="text-gray-400 leading-relaxed">
+              Plugin-Konflikte sind eine weitere grosse Gefahr. WooCommerce-Core-Updates sind nicht immer
+              rueckwaertskompatibel mit allen Plugins. Ohne Staging-Umgebung und Kompatibilitaetspruefung
+              koennen Updates den Checkout lahmlegen, Zahlungs-Gateways ausschalten oder ganze
+              Produktseiten unbrauchbar machen. Jede Stunde Downtime bedeutet direkte Umsatzverluste.
+            </p>
+            <p className="text-gray-400 leading-relaxed">
+              Checkout-Abbrueche durch technische Fehler sind besonders schaedlich — nicht nur weil der
+              Umsatz fehlt, sondern weil veraeaergerte Kunden selten zurueckkommen. Regelmaessige
+              WooCommerce-Wartung mit manuellen Checkout-Tests nach jedem Update verhindert genau diese
+              Szenarien. Wartung ist keine Ausgabe — sie ist Umsatzschutz.
+            </p>
+          </div>
+        </div>
+
+        <SectionDivider label="PROZESS" />
+
+        {/* ── Process Steps ── */}
+        <div className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+            Unser Wartungs-Prozess in 4 Schritten
+          </h2>
+          <div className="space-y-4">
+            {[
+              {
+                step: '01',
+                title: 'Staging-Clone erstellen',
+                desc: 'Bevor wir irgendetwas anfassen, erstellen wir eine exakte Kopie deines Live-Shops auf der Staging-Umgebung — inklusive Datenbank, Medien und Konfiguration.',
+              },
+              {
+                step: '02',
+                title: 'Updates testen',
+                desc: 'WooCommerce Core, alle Plugins und das Theme werden auf Staging eingespielt. Wir pruefen auf PHP-Errors, visuelle Brueche und Funktionsverluste.',
+              },
+              {
+                step: '03',
+                title: 'Checkout manuell pruefen',
+                desc: 'Wir legen eine Testbestellung durch den kompletten Checkout — Warenkorb, Versand, Zahlung, Bestellbestaetigung. Erst bei gruener Ampel geht es weiter.',
+              },
+              {
+                step: '04',
+                title: 'Live-Deployment',
+                desc: 'Nach erfolgreichem Test wird auf Live deployt — mit vorherigem Backup als Sicherheitsnetz. Der gesamte Prozess ist dokumentiert und nachvollziehbar.',
+              },
+            ].map((item, i) => (
+              <div
+                key={item.step}
+                className={`flex gap-5 p-5 glass-card rounded-xl border border-white/5 hover:border-blue-500/20 transition-all duration-200 animate-fade-in-up delay-${(i + 1) * 100}`}
+              >
+                <div className="w-12 h-12 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 font-bold font-mono text-sm shrink-0">
+                  {item.step}
+                </div>
+                <div>
+                  <h3 className="font-bold text-white mb-1">{item.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <SectionDivider label="PAKETE" ctaText="Alle Pakete" ctaHref="/pricing" />
+
+        {/* ── Pricing CTA ── */}
+        <div className="relative overflow-hidden bg-blue-500/5 border border-blue-500/20 rounded-2xl p-8 mb-16">
+          <GridBackground variant="dots" />
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-xs font-mono text-blue-400 bg-blue-500/10 px-2 py-1 rounded">PAKETE</span>
+            </div>
+            <p className="text-gray-400 mb-2">
+              Von Starter (5 Stunden/Monat) bis Enterprise (individuell) — alle Pakete beinhalten
+              Staging-Updates, Monitoring, Backups und monatliches Reporting. Monatlich kuendbar,
+              kein Jahresvertrag.
+            </p>
+            <p className="text-gray-400 mb-6">
+              Preise starten ab{' '}
+              <span className="text-2xl font-bold text-white">490 Euro</span>{' '}
+              pro Monat fuer professionelle WooCommerce Wartung aus Muenchen.
+            </p>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/30 hover:shadow-blue-500/30 btn-shine"
+            >
+              Alle Pakete ansehen
+              <i className="fa-solid fa-arrow-right text-sm" />
+            </Link>
+          </div>
+        </div>
+
+        <SectionDivider label="FAQ" />
+
+        {/* ── FAQ ── */}
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
           Haeufige Fragen zur WooCommerce Wartung
         </h2>
-        <div className="bg-white/2 border border-white/5 rounded-2xl p-8 mb-20">
+        <div className="bg-white/2 border border-white/5 rounded-2xl p-8 mb-16">
           <div className="space-y-6">
             {faqItems.map((item) => (
               <div key={item.q} className="border-b border-white/5 pb-6 last:border-0 last:pb-0">
@@ -277,7 +315,7 @@ export default function WooCommerceWartungPage() {
           </div>
         </div>
 
-        {/* Final CTA */}
+        {/* ── Final CTA ── */}
         <div className="text-center py-8">
           <p className="text-gray-400 mb-6 text-lg">
             Bereit fuer zuverlaessige WooCommerce Wartung aus Muenchen?
@@ -290,6 +328,7 @@ export default function WooCommerceWartungPage() {
             <i className="fa-solid fa-arrow-right" />
           </Link>
         </div>
+
       </div>
     </div>
   );

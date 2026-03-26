@@ -7,6 +7,7 @@ import WhyRunByCode from '@/components/sections/WhyRunByCode';
 import Portfolio from '@/components/sections/Portfolio';
 import Testimonials from '@/components/sections/Testimonials';
 import ContactForm from '@/components/sections/ContactForm';
+import SectionDivider from '@/components/ui/SectionDivider';
 
 export const metadata: Metadata = {
   title: 'WooCommerce Agentur München | RunByCode',
@@ -23,9 +24,13 @@ export default function HomePage() {
       <Hero />
       <LogoMarquee />
       <Blackbox />
+      <SectionDivider label="LEISTUNGEN" />
       <Services />
+      <SectionDivider label="WARUM WIR" />
       <WhyRunByCode />
+      <SectionDivider label="REFERENZEN" ctaText="Alle Referenzen" ctaHref="/referenzen" />
       <Portfolio />
+      <SectionDivider label="KUNDENSTIMMEN" />
       <Testimonials />
       <ContactForm />
     </>

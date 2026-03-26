@@ -14,78 +14,169 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto">
 
-          {/* Performance — wide */}
-          <div className="md:col-span-2 glass-card p-8 rounded-2xl group hover:border-blue-500/30 transition-all duration-500">
-            <div className="flex items-start justify-between mb-6">
-              <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl">
-                <i className="fa-solid fa-bolt" />
+          {/* Performance — wide, with SVG illustration */}
+          <div className="md:col-span-2 glass-card p-8 rounded-2xl group hover:border-blue-500/30 transition-all duration-500 relative overflow-hidden">
+            {/* SVG background illustration: speed lines + arc */}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 480 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute right-0 top-0 w-64 h-40 opacity-[0.06] pointer-events-none transition-opacity duration-500 group-hover:opacity-[0.10]"
+            >
+              {/* Diagonal speed lines */}
+              <line x1="200" y1="10" x2="480" y2="10" stroke="#3b82f6" strokeWidth="1" />
+              <line x1="170" y1="30" x2="480" y2="30" stroke="#3b82f6" strokeWidth="0.75" />
+              <line x1="230" y1="50" x2="480" y2="50" stroke="#3b82f6" strokeWidth="1" />
+              <line x1="180" y1="70" x2="480" y2="70" stroke="#3b82f6" strokeWidth="0.5" />
+              <line x1="210" y1="90" x2="480" y2="90" stroke="#3b82f6" strokeWidth="1" />
+              <line x1="190" y1="110" x2="480" y2="110" stroke="#3b82f6" strokeWidth="0.75" />
+              {/* Arc fragment */}
+              <path
+                d="M 380 180 A 140 140 0 0 1 480 60"
+                stroke="#3b82f6"
+                strokeWidth="1.5"
+                strokeDasharray="6 4"
+              />
+              <path
+                d="M 360 200 A 180 180 0 0 1 480 30"
+                stroke="#3b82f6"
+                strokeWidth="0.75"
+              />
+              {/* Speed arrow tip */}
+              <polyline points="450,85 470,90 450,95" stroke="#3b82f6" strokeWidth="1.5" fill="none" />
+            </svg>
+
+            <div className="relative z-10">
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 text-xl">
+                  <i className="fa-solid fa-bolt" />
+                </div>
+                <span className="text-xs font-mono bg-blue-500/10 text-blue-300 px-2 py-1 rounded">CORE WEB VITALS</span>
               </div>
-              <span className="text-xs font-mono bg-blue-500/10 text-blue-300 px-2 py-1 rounded">CORE WEB VITALS</span>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Performance Optimierung</h3>
-            <p className="text-gray-500 dark:text-gray-400 mb-4 max-w-lg">
-              Ein langsamer Shop verbrennt Geld. Wir optimieren nicht nur Caching Plugins, sondern
-              gehen tief in den Code. Datenbank-Bereinigung, Asset-Minification, Query-Optimierung
-              und Bildkomprimierung sind Standard.
-            </p>
-            <Link
-              href="/services/performance"
-              className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm mb-6 transition-colors"
-            >
-              Mehr zur Performance-Optimierung <i className="fa-solid fa-arrow-right text-xs" />
-            </Link>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-500 dark:text-gray-500">
-              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Google PageSpeed 90+</div>
-              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Datenbank Indizes</div>
-              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Image Delivery CDN</div>
-              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Script Deferring</div>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Performance Optimierung</h3>
+              <p className="text-gray-500 dark:text-gray-400 mb-4 max-w-lg">
+                Ein langsamer Shop verbrennt Geld. Wir optimieren nicht nur Caching Plugins, sondern
+                gehen tief in den Code. Datenbank-Bereinigung, Asset-Minification, Query-Optimierung
+                und Bildkomprimierung sind Standard.
+              </p>
+              <Link
+                href="/services/performance"
+                className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm mb-6 transition-colors"
+              >
+                Mehr zur Performance-Optimierung <i className="fa-solid fa-arrow-right text-xs" />
+              </Link>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-500 dark:text-gray-500">
+                <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Google PageSpeed 90+</div>
+                <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Datenbank Indizes</div>
+                <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Image Delivery CDN</div>
+                <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Script Deferring</div>
+              </div>
             </div>
           </div>
 
-          {/* Security */}
-          <div className="glass-card p-8 rounded-2xl group hover:border-red-500/30 transition-all duration-500">
-            <div className="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 text-xl mb-6">
-              <i className="fa-solid fa-shield-halved" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Ironclad Security</h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
-              24/7 Malware Scans und Firewall-Konfiguration. Sollte dein Shop gehackt werden,
-              bereinigen wir ihn sofort und kostenlos.
-            </p>
-            <Link
-              href="/services/security"
-              className="inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-sm mb-4 transition-colors"
+          {/* Security — with SVG hexagon */}
+          <div className="glass-card p-8 rounded-2xl group hover:border-red-500/30 transition-all duration-500 relative overflow-hidden">
+            {/* SVG: hexagon outline + small pentagons */}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 160 160"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute right-2 bottom-2 w-28 h-28 opacity-[0.07] pointer-events-none transition-opacity duration-500 group-hover:opacity-[0.12]"
             >
-              Mehr zu Security & Hacked Site Rescue <i className="fa-solid fa-arrow-right text-[10px]" />
-            </Link>
-            <ul className="space-y-2 text-xs text-gray-500 dark:text-gray-500">
-              <li className="flex items-center gap-2"><span className="w-1 h-1 bg-red-500 rounded-full" /> Brute Force Protection</li>
-              <li className="flex items-center gap-2"><span className="w-1 h-1 bg-red-500 rounded-full" /> 2FA Einrichtung</li>
-              <li className="flex items-center gap-2"><span className="w-1 h-1 bg-red-500 rounded-full" /> Malware Removal Garantie</li>
-            </ul>
+              <polygon
+                points="80,8 144,44 144,116 80,152 16,116 16,44"
+                stroke="#ef4444"
+                strokeWidth="1"
+                fill="none"
+              />
+              <polygon
+                points="80,28 124,52 124,108 80,132 36,108 36,52"
+                stroke="#ef4444"
+                strokeWidth="0.6"
+                strokeDasharray="4 3"
+                fill="none"
+              />
+              {/* Small pentagons */}
+              <polygon points="30,20 38,15 46,20 44,30 32,30" stroke="#ef4444" strokeWidth="0.75" fill="none" />
+              <polygon points="114,130 122,125 130,130 128,140 116,140" stroke="#ef4444" strokeWidth="0.75" fill="none" />
+            </svg>
+
+            <div className="relative z-10">
+              <div className="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 text-xl mb-6">
+                <i className="fa-solid fa-shield-halved" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Ironclad Security</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
+                24/7 Malware Scans und Firewall-Konfiguration. Sollte dein Shop gehackt werden,
+                bereinigen wir ihn sofort und kostenlos.
+              </p>
+              <Link
+                href="/services/security"
+                className="inline-flex items-center gap-1 text-red-400 hover:text-red-300 text-sm mb-4 transition-colors"
+              >
+                Mehr zu Security & Hacked Site Rescue <i className="fa-solid fa-arrow-right text-[10px]" />
+              </Link>
+              <ul className="space-y-2 text-xs text-gray-500 dark:text-gray-500">
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-red-500 rounded-full" /> Brute Force Protection</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-red-500 rounded-full" /> 2FA Einrichtung</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-red-500 rounded-full" /> Malware Removal Garantie</li>
+              </ul>
+            </div>
           </div>
 
-          {/* Updates */}
-          <div className="glass-card p-8 rounded-2xl group hover:border-green-500/30 transition-all duration-500 flex flex-col">
-            <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-400 text-xl mb-6">
-              <i className="fa-solid fa-rotate" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Sichere Updates</h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
-              Wir drücken nicht einfach &ldquo;Update&rdquo;. Wir erstellen einen Staging-Clone,
-              führen Updates durch und testen den Checkout manuell. Kein blindes Klicken — jede
-              Aktualisierung wird auf Herz und Nieren geprüft, bevor sie live geht.
-            </p>
-            <Link
-              href="/services/maintenance"
-              className="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-sm mb-4 transition-colors"
+          {/* Updates — with SVG rotation arc */}
+          <div className="glass-card p-8 rounded-2xl group hover:border-green-500/30 transition-all duration-500 flex flex-col relative overflow-hidden">
+            {/* SVG: rotation arc + deploy arrow */}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 140 140"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute right-2 top-2 w-24 h-24 opacity-[0.07] pointer-events-none transition-opacity duration-500 group-hover:opacity-[0.12]"
             >
-              Mehr zu Wartung & Pflege <i className="fa-solid fa-arrow-right text-[10px]" />
-            </Link>
-            <div className="mt-auto space-y-2 text-xs text-gray-500 dark:text-gray-500">
-              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Staging-Clone vor jedem Update</div>
-              <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Manueller Checkout-Test</div>
-              <div className="text-xs font-mono text-green-400 bg-green-900/20 inline-block px-2 py-1 rounded mt-2">Zero Downtime Strategy</div>
+              {/* Rotation arcs */}
+              <path
+                d="M 70 15 A 55 55 0 1 1 25 95"
+                stroke="#22c55e"
+                strokeWidth="1.5"
+                strokeDasharray="8 4"
+              />
+              <path
+                d="M 70 30 A 40 40 0 1 1 38 100"
+                stroke="#22c55e"
+                strokeWidth="0.75"
+              />
+              {/* Arrow at arc end (deploy indicator) */}
+              <polyline points="18,90 25,100 35,92" stroke="#22c55e" strokeWidth="1.5" fill="none" />
+              {/* Staging badge shape */}
+              <rect x="50" y="55" width="40" height="24" rx="4" stroke="#22c55e" strokeWidth="0.75" fill="none" />
+              <line x1="55" y1="64" x2="85" y2="64" stroke="#22c55e" strokeWidth="0.5" />
+              <line x1="55" y1="70" x2="75" y2="70" stroke="#22c55e" strokeWidth="0.5" />
+            </svg>
+
+            <div className="relative z-10 flex flex-col flex-1">
+              <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-400 text-xl mb-6">
+                <i className="fa-solid fa-rotate" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Sichere Updates</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
+                Wir drücken nicht einfach &ldquo;Update&rdquo;. Wir erstellen einen Staging-Clone,
+                führen Updates durch und testen den Checkout manuell. Kein blindes Klicken — jede
+                Aktualisierung wird auf Herz und Nieren geprüft, bevor sie live geht.
+              </p>
+              <Link
+                href="/services/maintenance"
+                className="inline-flex items-center gap-1 text-green-400 hover:text-green-300 text-sm mb-4 transition-colors"
+              >
+                Mehr zu Wartung & Pflege <i className="fa-solid fa-arrow-right text-[10px]" />
+              </Link>
+              <div className="mt-auto space-y-2 text-xs text-gray-500 dark:text-gray-500">
+                <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Staging-Clone vor jedem Update</div>
+                <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Manueller Checkout-Test</div>
+                <div className="text-xs font-mono text-green-400 bg-green-900/20 inline-block px-2 py-1 rounded mt-2">Zero Downtime Strategy</div>
+              </div>
             </div>
           </div>
 
