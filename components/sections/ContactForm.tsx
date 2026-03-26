@@ -122,9 +122,13 @@ export default function ContactForm() {
 
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>
-            Oder schreib uns direkt:{' '}
+            Oder direkt:{' '}
             <a href="mailto:kontakt@runbycode.de" className="text-blue-400 hover:text-blue-300">
               kontakt@runbycode.de
+            </a>
+            <span className="text-gray-600 dark:text-gray-500"> · </span>
+            <a href="tel:+4989328867711" className="text-blue-400 hover:text-blue-300">
+              +49 89 3288 6771
             </a>
           </p>
         </div>
