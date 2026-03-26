@@ -108,7 +108,7 @@ export default function RootLayout({
         },
         areaServed: 'DE',
         serviceType: 'WooCommerce Agentur',
-        email: 'hello@runbycode.com',
+        email: 'kontakt@runbycode.de',
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: '4.9',

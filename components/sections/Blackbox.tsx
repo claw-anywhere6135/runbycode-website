@@ -8,7 +8,7 @@ export default function Blackbox() {
 
           {/* Left — Sticky label */}
           <div className="sticky top-24">
-            <span className="text-8xl font-bold absolute -top-10 -left-10 select-none" style={{ color: 'rgba(0,0,0,0.08)' }}>WHY</span>
+            <span className="text-8xl font-bold absolute -top-10 -left-10 select-none" style={{ color: 'rgba(0,0,0,0.08)' }}>WARUM</span>
             <h2 className="text-3xl font-bold relative z-10 section-themed-strong">
               Schluss mit der <br />
               <span className="text-blue-500">Blackbox.</span>
@@ -18,7 +18,7 @@ export default function Blackbox() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
               </span>
-              <span className="text-xs text-gray-600 dark:text-gray-300 font-mono uppercase tracking-wider">Made in Munich, Germany</span>
+              <span className="text-xs text-gray-600 dark:text-gray-300 font-mono uppercase tracking-wider">Muenchen. Direkt. Transparent.</span>
             </div>
           </div>
 
@@ -32,7 +32,7 @@ export default function Blackbox() {
             <p>
               Als <strong className="section-themed-strong">WooCommerce Agentur</strong>{' '}verkaufen wir keine
               &ldquo;Versicherung&rdquo;, sondern{' '}
-              <strong className="section-themed-strong">Entwicklerzeit</strong>. Ob wir in deinen Stunden
+              <strong className="section-themed-strong">konkrete Entwicklungsarbeit</strong>. Ob wir in deinen Stunden
               Updates machen, deinen Checkout optimieren oder ein neues Feature bauen, liegt bei dir.
             </p>
             <p>

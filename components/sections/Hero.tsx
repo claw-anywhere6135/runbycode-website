@@ -41,7 +41,7 @@ export default function Hero() {
 
             <p className="text-xl text-gray-400 mb-10 leading-relaxed max-w-lg">
               Keine anonyme Agentur. Kein Callcenter. Wir sind dein technisches Rückgrat. Wir sorgen
-              dafür, dass dein Shop Umsatz macht, während du schläfst.
+              dafür, dass dein Shop reibungslos läuft — mit echten Entwicklern, die deinen Shop kennen.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -67,7 +67,7 @@ export default function Hero() {
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500" />
                 </span>
                 <span className="text-white text-sm font-medium">Florian & Team aktuell verfügbar</span>
-                <span className="text-gray-400 text-xs">• Ø 14min Response-Zeit heute</span>
+                <span className="text-gray-400 text-xs">• Schnelle Reaktionszeiten, direkter Kontakt</span>
               </div>
 
               {/* Team Avatars */}

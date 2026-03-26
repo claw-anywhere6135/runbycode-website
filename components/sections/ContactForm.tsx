@@ -21,7 +21,7 @@ export default function ContactForm() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Lass uns sprechen</h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg">
-            Bereit für besseren Support? Schick uns eine Nachricht und wir melden uns innerhalb
+            Klingt nach einem Fit? Schick uns kurz was — wir melden uns innerhalb
             von 24 Stunden.
           </p>
         </div>
@@ -122,8 +122,8 @@ export default function ContactForm() {
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>
             Oder schreib uns direkt:{' '}
-            <a href="mailto:hello@runbycode.com" className="text-blue-400 hover:text-blue-300">
-              hello@runbycode.com
+            <a href="mailto:kontakt@runbycode.de" className="text-blue-400 hover:text-blue-300">
+              kontakt@runbycode.de
             </a>
           </p>
         </div>
