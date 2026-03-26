@@ -10,7 +10,8 @@ export default function Blackbox() {
           <div className="sticky top-24">
             <span className="text-8xl font-bold absolute -top-10 -left-10 select-none" style={{ color: 'rgba(0,0,0,0.08)' }}>WARUM</span>
             <h2 className="text-3xl font-bold relative z-10 section-themed-strong">
-              Schluss damit, dass Sie nicht wissen was passiert.
+              Schluss mit der <br />
+              <span className="text-blue-500">Blackbox.</span>
             </h2>
             <div className="mt-6 inline-flex items-center gap-2 bg-gray-100 dark:bg-white/5 rounded-full px-4 py-2 border border-gray-300 dark:border-white/10">
               <span className="flex h-2 w-2 relative">
