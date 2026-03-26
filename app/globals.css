@@ -158,11 +158,33 @@ body {
 :root:not(.dark) .bg-\[\#050505\],
 :root:not(.dark) .bg-\[\#121212\],
 :root:not(.dark) .bg-\[\#0A0A0A\],
-:root:not(.dark) .bg-\[\#070707\],
 :root:not(.dark) .bg-\[#050505\],
-:root:not(.dark) .bg-\[#121212\],
-:root:not(.dark) .bg-\[#070707\] {
+:root:not(.dark) .bg-\[#121212\] {
   background-color: #f8fafc;
+}
+
+/* Bug 1 — Portfolio section: hardcoded #070707 */
+:root:not(.dark) section.bg-\[\#070707\],
+:root:not(.dark) .bg-\[\#070707\],
+:root:not(.dark) .bg-\[#070707\] {
+  background-color: #f1f5f9;
+}
+
+/* Bug 2 — Mobile Menu: stays dark */
+:root:not(.dark) .bg-\[\#050505\].fixed {
+  background-color: #ffffff;
+}
+:root:not(.dark) .bg-\[\#050505\].fixed a {
+  color: #0f172a;
+}
+:root:not(.dark) .bg-\[\#050505\].fixed .text-white {
+  color: #0f172a;
+}
+:root:not(.dark) .bg-\[\#050505\].fixed .text-gray-400 {
+  color: #64748b;
+}
+:root:not(.dark) .bg-\[\#050505\].fixed .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 /* Portfolio / Stats cards — gradient image placeholder overrides */
