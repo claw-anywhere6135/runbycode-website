@@ -177,7 +177,8 @@ export default function WooCommerceWartungPage() {
                   className={`group snap-start flex-shrink-0 w-[280px] md:w-[300px] glass-card p-6 rounded-xl border border-white/5 ${a.border} ${a.bg} transition-all duration-200`}
                 >
                   <div className={`w-10 h-10 ${a.iconBg} rounded-lg flex items-center justify-center mb-4`}>
-                    <i className={`${f.icon} text-blue-400 ${a.text} transition-colors`} />
+                    {/* Fix #5: static text-blue-400 removed — hover accent via a.text sets the color */}
+                  <i className={`${f.icon} text-gray-400 ${a.text} transition-colors`} />
                   </div>
                   <h3 className="font-bold text-white mb-2">{f.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{f.desc}</p>

@@ -6,6 +6,8 @@ interface HorizontalScrollCardsProps {
   title: string;
   subtitle?: string;
   badge?: string;
+  /** Background color for the fade-edges overlay. Match to the parent section bg. Default: #050505 */
+  fadeColor?: string;
   children: React.ReactNode;
 }
 
@@ -13,6 +15,7 @@ export default function HorizontalScrollCards({
   title,
   subtitle,
   badge,
+  fadeColor = '#050505',
   children,
 }: HorizontalScrollCardsProps) {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -61,18 +64,18 @@ export default function HorizontalScrollCards({
 
       {/* Fade edges */}
       <div className="relative">
-        {/* Left fade */}
+        {/* Left fade — Fix #4: uses fadeColor prop so it works on any bg */}
         <div
           className="absolute left-0 top-0 bottom-4 w-12 z-10 pointer-events-none"
           style={{
-            background: 'linear-gradient(to right, #050505, transparent)',
+            background: `linear-gradient(to right, ${fadeColor}, transparent)`,
           }}
         />
         {/* Right fade */}
         <div
           className="absolute right-0 top-0 bottom-4 w-12 z-10 pointer-events-none"
           style={{
-            background: 'linear-gradient(to left, #050505, transparent)',
+            background: `linear-gradient(to left, ${fadeColor}, transparent)`,
           }}
         />
 

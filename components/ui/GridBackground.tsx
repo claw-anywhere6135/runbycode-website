@@ -1,3 +1,7 @@
+'use client';
+
+import { useId } from 'react';
+
 interface GridBackgroundProps {
   variant?: 'grid' | 'dots' | 'cross';
   glowColor?: string;
@@ -11,6 +15,10 @@ export default function GridBackground({
   arc = false,
   className = '',
 }: GridBackgroundProps) {
+  // Fix #1: Unique SVG gradient ID per instance via React 18 useId
+  const uid = useId();
+  const arcGradId = `arcGrad-${uid.replace(/:/g, '')}`;
+
   const gridPattern =
     variant === 'dots'
       ? `radial-gradient(${glowColor} 1.5px, transparent 1.5px)`
@@ -22,7 +30,11 @@ export default function GridBackground({
          linear-gradient(90deg, ${glowColor} 1px, transparent 1px)`;
 
   const bgSize =
-    variant === 'dots' ? '28px 28px' : variant === 'cross' ? '28px 28px, 56px 56px, 56px 56px' : '56px 56px';
+    variant === 'dots'
+      ? '28px 28px'
+      : variant === 'cross'
+      ? '28px 28px, 56px 56px, 56px 56px'
+      : '56px 56px';
 
   return (
     <div
@@ -54,11 +66,19 @@ export default function GridBackground({
           className="absolute inset-0 w-full h-full opacity-[0.07]"
           preserveAspectRatio="xMidYMid slice"
         >
+          <defs>
+            <linearGradient id={arcGradId} x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0" />
+              <stop offset="40%" stopColor="#3b82f6" stopOpacity="1" />
+              <stop offset="60%" stopColor="#3b82f6" stopOpacity="1" />
+              <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
+            </linearGradient>
+          </defs>
           <circle
             cx="400"
             cy="400"
             r="320"
-            stroke="url(#arcGrad)"
+            stroke={`url(#${arcGradId})`}
             strokeWidth="1"
             strokeDasharray="12 8"
           />
@@ -66,23 +86,15 @@ export default function GridBackground({
             cx="400"
             cy="400"
             r="240"
-            stroke="url(#arcGrad)"
+            stroke={`url(#${arcGradId})`}
             strokeWidth="0.5"
           />
           <path
             d="M 80 400 Q 400 60 720 400"
-            stroke="url(#arcGrad)"
+            stroke={`url(#${arcGradId})`}
             strokeWidth="0.75"
             fill="none"
           />
-          <defs>
-            <linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0" />
-              <stop offset="40%" stopColor="#3b82f6" stopOpacity="1" />
-              <stop offset="60%" stopColor="#3b82f6" stopOpacity="1" />
-              <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
-            </linearGradient>
-          </defs>
         </svg>
       )}
 

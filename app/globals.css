@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Tailwind v4: bind dark: to html.dark class (next-themes), not OS media query */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --bg-primary: #050505;
   --bg-secondary: #0A0A0A;
@@ -149,6 +152,11 @@ body {
 :root:not(.dark) body {
   background-color: #f8fafc;
   color: #0f172a;
+}
+
+/* Services section: remove dark overlay in light mode */
+:root:not(.dark) .bg-black\/20 {
+  background-color: transparent;
 }
 
 /* ===== LIGHT MODE GLOBAL OVERRIDES ===== */

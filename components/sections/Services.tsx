@@ -24,13 +24,14 @@ export default function Services() {
               xmlns="http://www.w3.org/2000/svg"
               className="absolute right-0 top-0 w-64 h-40 opacity-[0.06] pointer-events-none transition-opacity duration-500 group-hover:opacity-[0.10]"
             >
-              {/* Diagonal speed lines */}
-              <line x1="200" y1="10" x2="480" y2="10" stroke="#3b82f6" strokeWidth="1" />
-              <line x1="170" y1="30" x2="480" y2="30" stroke="#3b82f6" strokeWidth="0.75" />
-              <line x1="230" y1="50" x2="480" y2="50" stroke="#3b82f6" strokeWidth="1" />
-              <line x1="180" y1="70" x2="480" y2="70" stroke="#3b82f6" strokeWidth="0.5" />
-              <line x1="210" y1="90" x2="480" y2="90" stroke="#3b82f6" strokeWidth="1" />
-              <line x1="190" y1="110" x2="480" y2="110" stroke="#3b82f6" strokeWidth="0.75" />
+              {/* Fix #3: Diagonal speed lines (skewed x-coords for actual angle) */}
+              <line x1="140" y1="0"  x2="480" y2="20"  stroke="#3b82f6" strokeWidth="1" />
+              <line x1="110" y1="20" x2="480" y2="38"  stroke="#3b82f6" strokeWidth="0.6" />
+              <line x1="160" y1="40" x2="480" y2="56"  stroke="#3b82f6" strokeWidth="1" />
+              <line x1="120" y1="60" x2="480" y2="74"  stroke="#3b82f6" strokeWidth="0.5" />
+              <line x1="150" y1="80" x2="480" y2="92"  stroke="#3b82f6" strokeWidth="1" />
+              <line x1="130" y1="100" x2="480" y2="110" stroke="#3b82f6" strokeWidth="0.75" />
+              <line x1="155" y1="120" x2="480" y2="128" stroke="#3b82f6" strokeWidth="0.5" />
               {/* Arc fragment */}
               <path
                 d="M 380 180 A 140 140 0 0 1 480 60"
@@ -44,7 +45,7 @@ export default function Services() {
                 strokeWidth="0.75"
               />
               {/* Speed arrow tip */}
-              <polyline points="450,85 470,90 450,95" stroke="#3b82f6" strokeWidth="1.5" fill="none" />
+              <polyline points="455,88 475,92 455,96" stroke="#3b82f6" strokeWidth="1.5" fill="none" />
             </svg>
 
             <div className="relative z-10">

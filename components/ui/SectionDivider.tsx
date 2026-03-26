@@ -9,17 +9,18 @@ interface SectionDividerProps {
 export default function SectionDivider({ label, ctaText, ctaHref }: SectionDividerProps) {
   return (
     <div className="relative flex items-center gap-4 py-8 px-6 max-w-4xl mx-auto w-full">
-      {/* Left line */}
+      {/* Left line — Fix #2: opacity erhöht auf 0.38, leichter blur für Glow-Effekt */}
       <div
         className="flex-1 h-px"
         style={{
-          background: 'linear-gradient(to right, transparent, rgba(59,130,246,0.25))',
+          background: 'linear-gradient(to right, transparent, rgba(59,130,246,0.38))',
+          filter: 'blur(0.4px)',
         }}
       />
 
-      {/* Center label */}
+      {/* Center label — Fix #2: text-[11px] statt text-[10px], opacity erhöht */}
       {label && (
-        <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.25em] text-blue-400/60 whitespace-nowrap px-2">
+        <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.25em] text-blue-400/75 whitespace-nowrap px-2">
           {label}
         </span>
       )}
@@ -28,7 +29,8 @@ export default function SectionDivider({ label, ctaText, ctaHref }: SectionDivid
       <div
         className="flex-1 h-px"
         style={{
-          background: 'linear-gradient(to left, transparent, rgba(59,130,246,0.25))',
+          background: 'linear-gradient(to left, transparent, rgba(59,130,246,0.38))',
+          filter: 'blur(0.4px)',
         }}
       />
 
