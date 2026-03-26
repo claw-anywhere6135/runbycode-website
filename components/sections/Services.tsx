@@ -6,7 +6,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Full-Stack WooCommerce Service</h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Wir kümmern uns um die Technik, damit du dich auf das Wachstum konzentrieren kannst.
             Hier ist, was in unseren Stundenpaketen steckt.
           </p>
@@ -56,7 +56,7 @@ export default function Services() {
                 <span className="text-xs font-mono bg-blue-500/10 text-blue-300 px-2 py-1 rounded">CORE WEB VITALS</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Performance Optimierung</h3>
-              <p className="text-gray-500 dark:text-gray-400 mb-4 max-w-lg">
+              <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-lg">
                 Ein langsamer Shop verbrennt Geld. Wir optimieren nicht nur Caching Plugins, sondern
                 gehen tief in den Code. Datenbank-Bereinigung, Asset-Minification, Query-Optimierung
                 und Bildkomprimierung sind Standard.
@@ -67,7 +67,7 @@ export default function Services() {
               >
                 Mehr zur Performance-Optimierung <i className="fa-solid fa-arrow-right text-xs" />
               </Link>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-500 dark:text-gray-500">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Google PageSpeed 90+</div>
                 <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Datenbank Indizes</div>
                 <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Image Delivery CDN</div>
@@ -109,7 +109,7 @@ export default function Services() {
                 <i className="fa-solid fa-shield-halved" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Ironclad Security</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
                 24/7 Malware Scans und Firewall-Konfiguration. Sollte dein Shop gehackt werden,
                 bereinigen wir ihn sofort und kostenlos.
               </p>
@@ -119,7 +119,7 @@ export default function Services() {
               >
                 Mehr zu Security & Hacked Site Rescue <i className="fa-solid fa-arrow-right text-[10px]" />
               </Link>
-              <ul className="space-y-2 text-xs text-gray-500 dark:text-gray-500">
+              <ul className="space-y-2 text-xs text-gray-600 dark:text-gray-400">
                 <li className="flex items-center gap-2"><span className="w-1 h-1 bg-red-500 rounded-full" /> Brute Force Protection</li>
                 <li className="flex items-center gap-2"><span className="w-1 h-1 bg-red-500 rounded-full" /> 2FA Einrichtung</li>
                 <li className="flex items-center gap-2"><span className="w-1 h-1 bg-red-500 rounded-full" /> Malware Removal Garantie</li>
@@ -162,7 +162,7 @@ export default function Services() {
                 <i className="fa-solid fa-rotate" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Sichere Updates</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
                 Wir drücken nicht einfach &ldquo;Update&rdquo;. Wir erstellen einen Staging-Clone,
                 führen Updates durch und testen den Checkout manuell. Kein blindes Klicken — jede
                 Aktualisierung wird auf Herz und Nieren geprüft, bevor sie live geht.
@@ -173,10 +173,10 @@ export default function Services() {
               >
                 Mehr zu Wartung & Pflege <i className="fa-solid fa-arrow-right text-[10px]" />
               </Link>
-              <div className="mt-auto space-y-2 text-xs text-gray-500 dark:text-gray-500">
+              <div className="mt-auto space-y-2 text-xs text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Staging-Clone vor jedem Update</div>
                 <div className="flex items-center gap-2"><i className="fa-solid fa-check text-green-500" /> Manueller Checkout-Test</div>
-                <div className="text-xs font-mono text-green-400 bg-green-900/20 inline-block px-2 py-1 rounded mt-2">Zero Downtime Strategy</div>
+                <div className="text-xs font-semibold font-mono text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/20 border border-green-200 dark:border-green-900/40 inline-block px-2 py-1 rounded mt-2">Zero Downtime Strategy</div>
               </div>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function Services() {
               <span className="text-xs font-mono bg-purple-500/10 text-purple-300 px-2 py-1 rounded">FEATURE DEVELOPMENT</span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Custom Development</h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
               Dein Stundenkontingent ist flexibel. Nutze es nicht nur für Wartung, sondern für
               Weiterentwicklung. Wir bauen Custom Plugins, passen Checkout-Flows an oder
               integrieren APIs (ERP, CRM).
@@ -203,7 +203,7 @@ export default function Services() {
             </Link>
             <div className="mt-auto flex flex-wrap gap-1">
               {['PHP 8.x', 'React / Vue', 'REST API', 'Stripe / PayPal'].map((tag) => (
-                <span key={tag} className="px-3 py-1 border border-gray-200 dark:border-white/10 rounded-full text-xs text-gray-500 dark:text-gray-400">
+                <span key={tag} className="px-3 py-1 border border-gray-200 dark:border-white/10 rounded-full text-xs text-gray-600 dark:text-gray-400">
                   {tag}
                 </span>
               ))}
@@ -216,12 +216,12 @@ export default function Services() {
               <i className="fa-solid fa-server" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Backup & Uptime</h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
               Echtzeit-Backups auf externen Servern (AWS S3) und minütliches Uptime-Monitoring.
               Wenn dein Shop down ist, wissen wir es vor dir — nicht deine Kunden. Automatische
               Wiederherstellung inklusive.
             </p>
-            <div className="mt-auto space-y-2 text-xs text-gray-500 dark:text-gray-500">
+            <div className="mt-auto space-y-2 text-xs text-gray-600 dark:text-gray-400">
               <div className="flex items-center gap-2"><i className="fa-solid fa-check text-orange-400" /> AWS S3 Off-Site Backups</div>
               <div className="flex items-center gap-2"><i className="fa-solid fa-check text-orange-400" /> Minütliches Uptime-Monitoring</div>
               <div className="flex items-center gap-2"><i className="fa-solid fa-check text-orange-400" /> Sofort-Alert bei Ausfall</div>

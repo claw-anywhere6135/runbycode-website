@@ -2,7 +2,7 @@
 
 export default function WhyRunByCode() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="why-runbycode" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <div className="inline-flex items-center mb-4 border-l-2 border-blue-500 pl-4">
@@ -14,7 +14,7 @@ export default function WhyRunByCode() {
               Kein Anonymat.
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
             Es gibt viele WooCommerce-Agenturen. Hier ist, was uns wirklich unterscheidet.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function WhyRunByCode() {
                 <i className="fa-solid fa-user-tie" />
               </div>
               <h3 className="text-xl font-bold text-white">Direkter Entwickler-Kontakt</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 Kein Account Manager, kein Ticket-System ohne Antwort. Wenn du schreibst, antwortet
                 der Entwickler, der auch wirklich an deinem Shop arbeitet. Du kennst den Namen, du
                 kennst die Person. Das macht den Unterschied zwischen echtem Support und einer
@@ -122,7 +122,7 @@ export default function WhyRunByCode() {
                 <i className="fa-solid fa-clock-rotate-left" />
               </div>
               <h3 className="text-xl font-bold text-white">Flexible Stunden statt Pauschalen</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 Monat langweilig? Nutze deine Stunden fuer Features. Kritischer Bug? Alle Stunden
                 fliessen in die Loesung. Du entscheidest jeden Monat neu, wie dein Kontingent
                 eingesetzt wird — fuer Wartung, Performance, Design oder neue Funktionen.
@@ -175,7 +175,7 @@ export default function WhyRunByCode() {
                 <i className="fa-solid fa-location-dot" />
               </div>
               <h3 className="text-xl font-bold text-white">Remote-first aus Muenchen</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 Unser Team arbeitet verteilt und effizient — ohne Bueromiete, die du mitbezahlst.
                 Trotzdem Made in Germany: deutsche Qualitaetsstandards, deutsche Kommunikation,
                 deutsche Rechtssicherheit. Wenn es sein muss, sind wir auch persoenlich in Muenchen

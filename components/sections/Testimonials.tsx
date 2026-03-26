@@ -81,7 +81,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-24 bg-gray-50 dark:bg-brand-black overflow-hidden"
+      className="py-24 section-alt-bg overflow-hidden scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -99,7 +99,7 @@ export default function Testimonials() {
 
         {/* 3-column vertical marquee */}
         <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[600px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white_15%,white_85%,transparent)]"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[600px] overflow-hidden testimonials-mask"
         >
           {/* Column 1 — scrolls up */}
           <div className="animate-scroll-up">

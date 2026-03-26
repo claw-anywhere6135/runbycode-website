@@ -85,7 +85,7 @@ export default function Portfolio() {
               type="button"
               onClick={() => scroll('left')}
               aria-label="Zurueck"
-              className="w-11 h-11 rounded-full border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-700 dark:text-white transition-colors flex items-center justify-center"
+              className="w-11 h-11 rounded-full border border-gray-300 dark:border-white/10 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-700 dark:text-white transition-colors flex items-center justify-center"
             >
               <i className="fa-solid fa-chevron-left text-sm" />
             </button>
@@ -93,7 +93,7 @@ export default function Portfolio() {
               type="button"
               onClick={() => scroll('right')}
               aria-label="Weiter"
-              className="w-11 h-11 rounded-full border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-700 dark:text-white transition-colors flex items-center justify-center"
+              className="w-11 h-11 rounded-full border border-gray-300 dark:border-white/10 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-700 dark:text-white transition-colors flex items-center justify-center"
             >
               <i className="fa-solid fa-chevron-right text-sm" />
             </button>
@@ -123,14 +123,14 @@ export default function Portfolio() {
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-base font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">{project.description}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{project.description}</p>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[11px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-500 dark:text-gray-400"
+                      className="text-[11px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-300 dark:border-white/10 text-gray-600 dark:text-gray-400"
                     >
                       {tag}
                     </span>

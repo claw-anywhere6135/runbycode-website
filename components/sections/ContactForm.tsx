@@ -20,7 +20,7 @@ export default function ContactForm() {
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Lass uns sprechen</h2>
-          <p className="text-gray-500 dark:text-gray-400 text-lg">
+          <p className="text-gray-600 dark:text-gray-300 text-lg">
             Bereit für besseren Support? Schick uns eine Nachricht und wir melden uns innerhalb
             von 24 Stunden.
           </p>
