@@ -23,24 +23,25 @@ export default function Hero() {
               <span className="text-blue-400 font-mono text-sm tracking-wide">FLORIAN SALMAN · MÜNCHEN</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-              <span>
-                WordPress & WooCommerce —
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
+              <span className="whitespace-nowrap">
+                Dein{' '}
+                <span className="relative inline-block">
+                  <span className="relative z-10">WooCommerce</span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-purple-500/30 transform -skew-x-12 -z-10" />
+                </span>
               </span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
-                mit einem Ansprechpartner der antwortet.
+                CTO auf Abruf.
               </span>
             </h1>
             {/* Hidden SEO keyword */}
             <p className="sr-only">WordPress WooCommerce Agentur München — RunByCode</p>
 
-            <p className="text-xl text-gray-400 mb-4 leading-relaxed max-w-lg">
-              Für Unternehmen die ihre Website ernst nehmen. Kein Ticketsystem, keine wechselnden
-              Kontakte. Sie beschreiben das Ziel — wir setzen es um.
-            </p>
-            <p className="text-sm text-blue-400/80 font-mono mb-10">
-              Florian Salman · München · Seit 10 Jahren WordPress & WooCommerce
+            <p className="text-xl text-gray-400 mb-10 leading-relaxed max-w-lg">
+              Kein Ticketsystem, keine wechselnden Kontakte. Sie beschreiben das Ziel — Florian
+              und sein Team setzen es um. Direkt, verlässlich, ohne Umwege.
             </p>
 
             <div className="flex flex-wrap gap-4">
