@@ -63,7 +63,7 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="py-24 bg-[#070707] overflow-hidden">
+    <section id="portfolio" className="py-24 bg-gray-50 dark:bg-[#070707] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
@@ -71,10 +71,10 @@ export default function Portfolio() {
             <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-blue-400 bg-blue-950/40 border border-blue-800/30 rounded-full px-4 py-1.5 mb-5">
               Portfolio
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
               Projekte die liefern
             </h2>
-            <p className="mt-3 text-gray-400 max-w-xl text-base">
+            <p className="mt-3 text-gray-500 dark:text-gray-400 max-w-xl text-base">
               Ausgewaehlte Cases aus 40+ Shops — jedes Projekt mit messbaren Ergebnissen.
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function Portfolio() {
               type="button"
               onClick={() => scroll('left')}
               aria-label="Zurueck"
-              className="w-11 h-11 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-white transition-colors flex items-center justify-center"
+              className="w-11 h-11 rounded-full border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-700 dark:text-white transition-colors flex items-center justify-center"
             >
               <i className="fa-solid fa-chevron-left text-sm" />
             </button>
@@ -93,7 +93,7 @@ export default function Portfolio() {
               type="button"
               onClick={() => scroll('right')}
               aria-label="Weiter"
-              className="w-11 h-11 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-white transition-colors flex items-center justify-center"
+              className="w-11 h-11 rounded-full border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-700 dark:text-white transition-colors flex items-center justify-center"
             >
               <i className="fa-solid fa-chevron-right text-sm" />
             </button>
@@ -113,7 +113,7 @@ export default function Portfolio() {
             >
               {/* Placeholder image */}
               <div className={`aspect-video w-full bg-gradient-to-br ${project.gradient} relative flex items-center justify-center`}>
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 bg-black/20 dark:bg-black/20 light:bg-white/10" />
                 <div className="relative text-center px-6">
                   <div className="text-3xl font-black text-white">{project.metric}</div>
                   <div className="text-xs text-white/60 mt-1 font-medium uppercase tracking-wider">{project.metricLabel}</div>
@@ -122,15 +122,15 @@ export default function Portfolio() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-base font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-4">{project.description}</p>
+                <h3 className="text-base font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">{project.description}</p>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[11px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full bg-white/5 border border-white/8 text-gray-400"
+                      className="text-[11px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-500 dark:text-gray-400"
                     >
                       {tag}
                     </span>

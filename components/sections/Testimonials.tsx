@@ -63,10 +63,10 @@ function TestimonialCard({ item }: { item: (typeof testimonials)[0] }) {
   return (
     <div className="glass-card rounded-xl p-5 mb-4 flex-shrink-0">
       <Stars count={item.stars} />
-      <p className="mt-3 text-sm text-gray-300 leading-relaxed">&quot;{item.text}&quot;</p>
+      <p className="mt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">&quot;{item.text}&quot;</p>
       <div className="mt-4">
-        <span className="text-sm font-semibold text-white">{item.name}</span>
-        <span className="text-xs text-gray-500 ml-2">{item.role}</span>
+        <span className="text-sm font-semibold text-gray-900 dark:text-white">{item.name}</span>
+        <span className="text-xs text-gray-400 dark:text-gray-500 ml-2">{item.role}</span>
       </div>
     </div>
   );
@@ -81,7 +81,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-24 bg-brand-black overflow-hidden"
+      className="py-24 bg-gray-50 dark:bg-brand-black overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -89,10 +89,10 @@ export default function Testimonials() {
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-blue-400 bg-blue-950/40 border border-blue-800/30 rounded-full px-4 py-1.5 mb-5">
             Referenzen
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             Was unsere Kunden sagen
           </h2>
-          <p className="mt-4 text-gray-400 max-w-xl mx-auto text-base">
+          <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-base">
             Echte Ergebnisse fuer echte Shops. Keine Templates, keine generischen Loesungen.
           </p>
         </div>

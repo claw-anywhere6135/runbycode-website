@@ -148,38 +148,38 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[#050505] transform transition-transform duration-300 md:hidden flex flex-col pt-24 md:pt-32 px-6 ${
+        className={`fixed inset-0 z-40 bg-white dark:bg-[#050505] transform transition-transform duration-300 md:hidden flex flex-col pt-24 md:pt-32 px-6 ${
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="space-y-2">
-          <Link href="/about" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-white py-4 border-b border-white/5 hover:text-blue-500 transition-colors">
+          <Link href="/about" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/5 hover:text-blue-500 transition-colors">
             Über uns
           </Link>
-          <div className="border-b border-white/5 pb-2">
-            <Link href="/services" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-white py-4 hover:text-blue-500 transition-colors">
+          <div className="border-b border-gray-100 dark:border-white/5 pb-2">
+            <Link href="/services" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-gray-900 dark:text-white py-4 hover:text-blue-500 transition-colors">
               Leistungen
             </Link>
             <div className="pl-2 mt-1 space-y-1 text-base">
-              <Link href="/services/performance" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-blue-400 transition-colors">Performance</Link>
-              <Link href="/services/security" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-red-400 transition-colors">Security</Link>
-              <Link href="/services/maintenance" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-green-400 transition-colors">Wartung</Link>
-              <Link href="/services/b2b-shops" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-purple-300 transition-colors">B2B Shops</Link>
-              <Link href="/woocommerce-wartung" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-blue-400 transition-colors">WooCommerce Wartung</Link>
-              <Link href="/wordpress-wartung" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-blue-400 transition-colors">WordPress Wartung</Link>
-              <Link href="/woocommerce-entwickler" onClick={() => setMobileOpen(false)} className="block text-gray-400 hover:text-blue-400 transition-colors">WooCommerce Entwickler</Link>
+              <Link href="/services/performance" onClick={() => setMobileOpen(false)} className="block text-gray-500 dark:text-gray-400 hover:text-blue-400 transition-colors">Performance</Link>
+              <Link href="/services/security" onClick={() => setMobileOpen(false)} className="block text-gray-500 dark:text-gray-400 hover:text-red-400 transition-colors">Security</Link>
+              <Link href="/services/maintenance" onClick={() => setMobileOpen(false)} className="block text-gray-500 dark:text-gray-400 hover:text-green-400 transition-colors">Wartung</Link>
+              <Link href="/services/b2b-shops" onClick={() => setMobileOpen(false)} className="block text-gray-500 dark:text-gray-400 hover:text-purple-300 transition-colors">B2B Shops</Link>
+              <Link href="/woocommerce-wartung" onClick={() => setMobileOpen(false)} className="block text-gray-500 dark:text-gray-400 hover:text-blue-400 transition-colors">WooCommerce Wartung</Link>
+              <Link href="/wordpress-wartung" onClick={() => setMobileOpen(false)} className="block text-gray-500 dark:text-gray-400 hover:text-blue-400 transition-colors">WordPress Wartung</Link>
+              <Link href="/woocommerce-entwickler" onClick={() => setMobileOpen(false)} className="block text-gray-500 dark:text-gray-400 hover:text-blue-400 transition-colors">WooCommerce Entwickler</Link>
             </div>
           </div>
-          <Link href="/portfolio" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-white py-4 border-b border-white/5 hover:text-blue-500 transition-colors">
+          <Link href="/portfolio" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/5 hover:text-blue-500 transition-colors">
             Portfolio
           </Link>
-          <Link href="/referenzen" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-white py-4 border-b border-white/5 hover:text-blue-500 transition-colors">
+          <Link href="/referenzen" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/5 hover:text-blue-500 transition-colors">
             Referenzen
           </Link>
-          <Link href="/pricing" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-white py-4 border-b border-white/5 hover:text-blue-500 transition-colors">
+          <Link href="/pricing" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/5 hover:text-blue-500 transition-colors">
             Preise
           </Link>
-          <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-white py-4 border-b border-white/5 hover:text-blue-500 transition-colors">
+          <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-3xl font-bold text-gray-900 dark:text-white py-4 border-b border-gray-100 dark:border-white/5 hover:text-blue-500 transition-colors">
             Kontakt
           </Link>
         </div>

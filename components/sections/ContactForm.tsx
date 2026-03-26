@@ -16,11 +16,11 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="kontakt" className="py-24 relative bg-brand-card pattern-diagonal">
+    <section id="kontakt" className="py-24 relative bg-white dark:bg-brand-card pattern-diagonal">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Lass uns sprechen</h2>
-          <p className="text-gray-400 text-lg">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Lass uns sprechen</h2>
+          <p className="text-gray-500 dark:text-gray-400 text-lg">
             Bereit für besseren Support? Schick uns eine Nachricht und wir melden uns innerhalb
             von 24 Stunden.
           </p>
@@ -30,14 +30,14 @@ export default function ContactForm() {
           {submitted ? (
             <div className="text-center py-12">
               <i className="fa-solid fa-circle-check text-green-500 text-5xl mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">Nachricht erhalten!</h3>
-              <p className="text-gray-400">Wir melden uns innerhalb von 24 Stunden bei dir.</p>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Nachricht erhalten!</h3>
+              <p className="text-gray-500 dark:text-gray-400">Wir melden uns innerhalb von 24 Stunden bei dir.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Name *
                   </label>
                   <input
@@ -45,12 +45,12 @@ export default function ContactForm() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors outline-none"
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors outline-none"
                     placeholder="Max Mustermann"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     E-Mail *
                   </label>
                   <input
@@ -58,27 +58,27 @@ export default function ContactForm() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors outline-none"
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors outline-none"
                     placeholder="max@shop.de"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="shopUrl" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="shopUrl" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Shop URL (optional)
                 </label>
                 <input
                   type="url"
                   id="shopUrl"
                   name="shopUrl"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors outline-none"
+                  className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors outline-none"
                   placeholder="https://deinshop.de"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Nachricht *
                 </label>
                 <textarea
@@ -86,7 +86,7 @@ export default function ContactForm() {
                   name="message"
                   rows={5}
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors outline-none resize-none"
+                  className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors outline-none resize-none"
                   placeholder="Erzähl uns von deinem Projekt..."
                 />
               </div>
@@ -97,9 +97,9 @@ export default function ContactForm() {
                   id="privacy"
                   name="privacy"
                   required
-                  className="mt-1 w-4 h-4 rounded border-white/10 bg-white/5 text-blue-600 focus:ring-blue-500"
+                  className="mt-1 w-4 h-4 rounded border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-blue-600 focus:ring-blue-500"
                 />
-                <label htmlFor="privacy" className="text-sm text-gray-400">
+                <label htmlFor="privacy" className="text-sm text-gray-500 dark:text-gray-400">
                   Ich stimme der Verarbeitung meiner Daten gemäß der{' '}
                   <a href="#" className="text-blue-400 hover:text-blue-300 underline">
                     Datenschutzerklärung
